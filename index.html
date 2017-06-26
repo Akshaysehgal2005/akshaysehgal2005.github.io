@@ -2,6 +2,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Akshay Sehgal is a Data Scientist heading RnD for a Big data startup in Mumbai.">
 	<meta name="keywords" content="Akshay Sehgal, Porftolio, Data Scientist, Machine Learning, Mumbai">
     <meta name="author" content="Akshay Sehgal">
@@ -19,494 +20,538 @@
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">	
     <!-- Custom CSS -->
-    <link href="css/simple-sidebar.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media
-    queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file://
-    -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+	<link href="css/base.css" rel="stylesheet">
+	<link href="css/navbar.css" rel="stylesheet">
+	<link href="css/sidenav.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
 	
-  <style>
-	.button {
-	display: inline-block;
-	border-radius: 4px;
-	background-color: #bdcd49;
-	border: none;
-	color: #FFFFFF;
-	text-align: center;
-	width: 120px;
-	transition: all 0.5s;
-	cursor: pointer;
-	}
-	
-	.button span {
-	cursor: pointer;
-	display: inline-block;
-	position: relative;
-	transition: 0.5s;
-	font-size: 80%;
-	font-weight: bold;
-	}
-	
-	.button span:after {
-	content: '\00bb';
-	position: absolute;
-	opacity: 0;
-	top: 0;
-	right: -20px;
-	transition: 0.5s;
-	}
-	
-	.button:hover span {
-	padding-right: 25px;
-	}
-	
-	.button:hover span:after {
-	opacity: 1;
-	right: 0;
-	}
-  </style>
-	
-  </head><body>
+	</head>
+	<body>
+
+	<!--Wrapper supreme-->
     <div id="wrapper">
-      <div id="sidebar-wrapper">
-       <div class="row" id="fullscreen">
-			<div class="col-md-12 fullscreen1">
-              <div class="sidebar-nav">
-                <div class="sidebar-brand">
-                  <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">
-					<li style="color: #666666">
-					<img id="show_img" src="img/akshay.png" height="150">
-					<h1 id="hide_text"><b>Akshay Sehgal</b></h1>
-					<br>
-					<div id="hide_img">
-					<img src="img/akshay.png" width="100" class="pulse">
-					</div>
-					<div>
-					<h4 id="hide_text"><span style="color: #bdcd49"><span id="hide_text">Data</span></span> Scientist</h4>
-					<h4 id="hide_text"><span style="color: #bdcd49"><span id="hide_text">Machine Learning</span></span> Expert</h4>
-					<h4 id="hide_text"><span style="color: #bdcd49"><span id="hide_text">Analytics</span></span> Consultant</h4>
-					<h4 id="hide_text"><span style="color: #bdcd49"><span id="hide_text">Graphics</span></span> Designer</h4>
-					</div>
-					</li>
+		<div class="row">
+		<!--START OF SIDENAV -->
+		<div id="mySidenav" class="sidenav hidden-xs">
+			<div class="sidenav-brand">
+				<div id="hide_me">
+					<a href="javascript:void(0)" onclick="closeNav();swapFirst()">
+					<!--center card-->
+					<ul class="list-unstyled">
+					<li><img src="img/akshay.png" width="120" class="pulse"></li>
+					<!--<li>
+						<h2><b>Akshay Sehgal</b></h2>
+						<h3><b>Data Scientist, Entreprenuer</b></h3>
+					</li>-->
+					</ul>
 					</a>
-                </div>
-              </div>
-            </div>
-          </div>		  
-		  
-         <!--</div>-->
-      </div>
-      <!-- /#sidebar-wrapper -->
-      <!-- Page Content -->
-      <div id="page-content-wrapper">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-md-12" style="padding-top: 25px; padding-left: 50px; padding-right: 50px;">
-              <div>
-                <ul class="nav nav-tabs field-0" role="tablist">
-                  <li role="presentation" class="active">
-                    <a href="#Portfolio" aria-controls="Portfolio" role="tab" data-toggle="tab"><b>Portfolio</b></a>
-                  </li>
-                  <li role="presentation">
-                    <a href="#Projects" aria-controls="Projects" role="tab" data-toggle="tab"><b>Projects</b></a>
-                  </li>
-                  <li role="presentation">
-                    <a href="#Analytics" aria-controls="Analytics" role="tab" data-toggle="tab"><b>Blog</b></a>
-                  </li>
-                  <li role="presentation">
-                    <a href="#Design" aria-controls="Design" role="tab" data-toggle="tab"><b>Design</b></a>
-                  </li>
-                  <li role="presentation">
-                    <a href="#Contact" aria-controls="Contact" role="tab" data-toggle="tab"><b>Contact</b></a>
-                  </li>
-				  <li class="pull-right">
-					<a class="field-1"><b>Akshay Sehgal</b></a>
-				  </li>
-					<li role="presentation" class="field-2 pull-right" style="font-size:140%">
-						<a href="https://www.kaggle.com/akshaysehgal" target="_blank"><i class="fa fa-1x fa-code fa-fw blackiconcolor"></i></a>
-					</li>
-					<li role="presentation" class="field-2 pull-right" style="font-size:140%">
-						<a href="https://github.com/Akshaysehgal2005" target="_blank"><i class="fa fa-1x fa-fw fa-github blackiconcolor"></i></a>
-					</li>
-					<li role="presentation" class="field-2 pull-right" style="font-size:140%">
-						<a href="https://www.behance.net/akshaysehgal" target="_blank"><i class="fa fa-1x fa-fw fa-behance blackiconcolor"></i></a>
-					</li>
-					<li role="presentation" class="field-2 pull-right" style="font-size:140%">
-						<a href="https://www.facebook.com/akshay.sehgal.35" target="_blank"><i class="fa fa-1x fa-facebook fa-fw blackiconcolor"></i></a>
-					</li>
-					<li role="presentation" class="field-2 pull-right" style="font-size:140%">
-						<a href="https://in.linkedin.com/in/akshay-sehgal-a5071458" target="_blank"><i class="fa fa-1x fa-fw fa-linkedin blackiconcolor"></i></a>
-					</li>	 <!-- https://in.linkedin.com/in/akshay-sehgal-a5071458 -->	
-				 </ul>
-				 
-                <!-- Tab panes -->
+				</div>
+				
+					<!--hidden icon-->
+				<div id="show_me" class="hidden">
+					<a href="javascript:void(0)" onclick="openNav();swapSecond()">
+						<img src="img/akshay.png" width="60" class="pulse">
+					</a>
+				</div>
+			</div>
+		</div>
+		<!-- END OF SIDENAV -->			
+
+		<!-- START OF MAIN PANEL -->
+		<div id="myMainpanel" class="mainpanel">
+			<div id="show_me_too">
+			
+				<!-- START OF NAVBAR -->
+				<div class="container-fluid">
+				<div class="navbar">
+					<div class="navbar-header">
+						<div class="visible-xs">
+							<ul class="nav nav-tabs" role="tablist">
+								<li class="active"><a href="#Portfolio" aria-controls="Portfolio" role="tab" data-toggle="tab"><i class="fa fa-1x fa-user"></i></a></li>
+								<li><a href="#Projects" aria-controls="Projects" role="tab" data-toggle="tab"><i class="fa fa-1x fa-area-chart"></i></a></li>
+								<li><a href="#Blog" aria-controls="Blog" role="tab" data-toggle="tab"><i class="fa fa-1x fa-coffee"></i></a></li>
+								<!--<li><a href="#Design" aria-controls="Design" role="tab" data-toggle="tab"><i class="fa fa-1x fa-paint-brush"></i></a></li>
+								<li><a href="#Contact" aria-controls="Contact" role="tab" data-toggle="tab"><i class="fa fa-1x fa-comments"></i></a></li>-->
+							</ul>
+						</div>
+					</div>
+					<div class="hidden-xs">
+						<ul class="nav nav-tabs" role="tablist">
+							<li><a><b>www.akshaysehgal.com</b></a></li>
+							<!--<li class="pull-right"><a href="#Contact" aria-controls="Contact" role="tab" data-toggle="tab"><b>Contact</b></a></li>
+							<li class="pull-right"><a href="#Design" aria-controls="Design" role="tab" data-toggle="tab"><b>Design</b></a></li>-->
+							<li class="pull-right"><a href="#Blog" aria-controls="Blog" role="tab" data-toggle="tab"><b>Blog</b></a></li>
+							<li class="pull-right"><a href="#Projects" aria-controls="Projects" role="tab" data-toggle="tab"><b>Projects</b></a></li>
+							<li class="active pull-right"><a href="#Portfolio" aria-controls="Portfolio" role="tab" data-toggle="tab"><b>Portfolio</b></a></li>
+						</ul>
+					</div>
+				</div>
+				</div>
+				<!-- END OF NAVBAR -->
+				
+				
                 <div class="tab-content">
-                  <div role="tabpanel" class="tab-pane active" id="Portfolio">
-                        <div class="row">
-                          <div class="col-md-12">
-                            <h3 style="color: #000">
-                             <b><span style="background-color: #bdcd49;">Data Scientist</span>
-								by profession & passion.</b>
-                            </h3>
-                            <p>I currently head Research & Development at iPredictt Data Science Labs, where I handle designing algorithms, models and KPIs for proprietary platforms and products. I lead a team of data scientists, product developers, and product marketing professionals, researching into latest data science techniques in order to align the solutions towards best in class technologies. I have had the opportunity to apply data science frameworks across multiple verticals including HR, Advertising, Finance, Retail and Casino industry.</p>
-                            <p>
-                              <b>I am a problem solver with a deep passion towards anything with an implicit design sense, may it be machine learning algorithms, innovative business models, infographic designs, digital art or Guthrie Govan guitar solos.</b>
-                            </p>
-                          </div>
-                        </div>
-                        <div class="row" style="padding-top: 30px">
-                          <div class="col-md-6">
-                            <h3 style="color: #000;">
-                              <b>My
-                                <span style="background-color: #bdcd49;">Skills & Achievements</span>.</b>
-                            </h3>
-                            <p>I have worked with supervised learning methods such as generalized regression models, decision trees, ensemble models (bagging algorithms, random forest, xgboost), support vector machines (SVM) and unsupervised models such as k-means clustering, gaussian mixture models, PCA and self-organizing maps. I have strong basics in linear algebra, information theory and statistics. Currently I am enhancing my knowledge of deep belief networks, autoencoders, convolutional neural networks and tensorflow.</p>
-							<p>I am a frequent contributer on Kaggle where I rank among top 7% data scientists globally. I have strong experience in handling clients, top management and have been a panelist/speaker at multiple tech events across India. I have 3 technology patents under my name as well.</p>
-                            <p>
-							<!--http://www.iotindiaexpo.com/iot-india-2017-speaker-profile.aspx?speaker=427-->
-                              <b>Data science is a field where if you aren't constantly learning, you can easily get left behind. This is why I stay an active part of the community, constantly learning and contributing.</b>
-                            </p>
-                          </div>
-                          <div class="col-md-6">
-                            <img src="img/pie.png" class="center-block" width="75%">
-                          </div>
-                        </div>
-						
-						
-                        <div class="row" style="padding-top: 20px">
-							<div class="col-md-6">
-                            <h3 style="color: #000;">
-                              <b>My
-                                <span style="background-color: #bdcd49;">Background</span>.</b>
-                            </h3>
-                            <p>My father serves the Indian Army as a consequence of which I have studied in a large number of schools across the country following which I did my Engineering in <b>Computer Sciences</b> from Pune University. During my college years, I started a design venture with my college friends and thus developed my interest in graphic designing, web development and some skills with Adobe Photoshop, Adobe Illustrator, GIMP, HTML, CSS and some Javascript.</p>
-                            <p>After college, I worked as a <b>Senior Data Scientist</b> at a reputed pure play analytics firm called Mu-Sigma, Bengaluru. After two and half years later I relocated to New Delhi where I joined iPredictt Data Science Labs.</p>
-                            <p>Now I work with them as <b>Head of research & development</b> and am currently located in Mumbai.</p>
-							  <br>
-                          </div>
-                          <div class="col-md-6">
-                            <h3 style="color: #000;">
-                              <b>More
-                                <span style="background-color: #bdcd49;">about me</span>.</b></h3>
-								<p>I aim to be a <b>multipotentialite</b> wired towards improving my knowledge in multiple sectors. My passion towards Data Science, Graphics & Web design, Philosophy and Guitar always keeps me busy. Mastery of logic and design sense is the general direction I have set for myself.</p>
-								<p>I prefer <b>experiential learning</b></span> over theory since I am already tuned towards developing 'muscle memory' through my childhood passion towards guitar and graphic designing. While learning anything, I prefer to spend a large amount of time researching and building a practical plan of achieveing a target with minimum effort and maximum retention.</p>
-								<p>My current interests involve:</p>
-								<ul>
-								<span style="color: #bdcd49"><li></span><span style="color: #333333;">Kaggling and data exploration</li></span>
-								<span style="color: #bdcd49"><li></span><span style="color: #333333;">Reading modern philosophy</li></span>
-								<span style="color: #bdcd49"><li></span><span style="color: #333333;">Digital art & Web design</li></span>
-								<span style="color: #bdcd49"><li></span><span style="color: #333333;">Playing guitar</li></span>
-                          </div>
-                          
-                        </div>
-						
-						<div class="row" style="padding-top: 20px">
-                          <div class="col-md-12">
-							<img class="center-block" src="img/timeline1.png" width="80%">
-                          </div>
-                        </div>
-						
-                    <div class="row">
-                      <div class="col-md-12"></div>
-                    </div>
-                  </div>
-                  <!--PROJECTS -->
-				  <!--style="padding-left: 50px; padding-right: 50px"-->
+				
+				<!--START OF PORTFOLIO-->
+                <div role="tabpanel" class="tab-pane active" id="Portfolio">
+				<div class="row">
+					<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+						<h2 style="padding-bottom: 10px;"><span style="font-weight:normal;">Akshay</span> Sehgal</h2>
+						<p>I am a <span class="bright">Data Scientist</span> by profession & passion, currently heading R&D at iPredictt Data Science Labs, where I handle designing algorithms, models and KPIs for proprietary platforms and products. I lead a team of data scientists, product developers, and product marketing professionals, researching into latest data science techniques in order to align the solutions towards best in class technologies. I have had the opportunity to apply data science frameworks across multiple verticals including HR, Advertising, Finance, Retail and Casino industry.</p>
+						<br>
+						<p>I have worked with supervised learning methods such as generalized regression models, decision trees, ensemble models (bagging algorithms, random forest, xgboost), support vector machines (SVM) and unsupervised models such as k-means clustering, gaussian mixture models, PCA and self-organizing maps. I have strong basics in linear algebra, information theory and statistics. Currently I am enhancing my knowledge of deep belief networks, autoencoders, convolutional neural networks and tensorflow.</p>
+						<br>
+						<p>I am a frequent contributer on Kaggle where I rank among top 7% data scientists globally<a href="https://www.kaggle.com/akshaysehgal" target="_blank"><sup>1</sup></a>. I have strong experience in handling non-technical clients, top management and have participated as a speaker at multiple tech events across India<a href="http://bit.ly/2tc3MNl" target="_blank"><sup>2</sup></a> <a href="http://bit.ly/2tcAe2D" target="_blank"><sup>3</sup></a> <a href="http://www.iotindiaexpo.com/iot-india-2017-speaker-profile.aspx?speaker=427" target="_blank"><sup>4</sup></a>. I also have 3 technology patents under my name<a href="http://bit.ly/2nYOlSg" target="_blank"><sup>5</sup></a> <a href="http://bit.ly/2rTbAjf" target="_blank"><sup>6</sup></a> <a href="http://bit.ly/2sdxSLM" target="_blank"><sup>7</sup></a>.</p>
+					</div>
+					<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+						<img src="img/pie.png" class="img-responsive center-block " width="75%" style="padding-top: 30px;">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12 col-lg-12 text-xs-center">
+					<ul class="list-unstyled list-inline">
+							<li><a href="https://in.linkedin.com/in/akshay-sehgal-a5071458" target="_blank"><i class="fa fa-2x fa-fw fa-linkedin grow blackiconcolor"></i></a></li>
+							<li><a href="https://www.facebook.com/akshay.sehgal.35" target="_blank"><i class="fa fa-2x fa-facebook fa-fw grow blackiconcolor"></i></a></li>
+							<li><a href="https://www.behance.net/akshaysehgal" target="_blank"><i class="fa fa-2x fa-fw fa-behance blackiconcolor grow"></i></a></li>
+							<li><a href="https://github.com/Akshaysehgal2005" target="_blank"><i class="fa fa-2x fa-fw fa-github blackiconcolor grow"></i></a></li>
+							<li><a href="https://www.kaggle.com/akshaysehgal" target="_blank"><i class="fa fa-2x fa-code fa-fw blackiconcolor grow"></i></a></li>
+							<li><a href="mailto:akshaysehgal2005@gmail.com" target="_blank"><i class="fa fa-2x fa-fw fa-envelope blackiconcolor grow"></i></a></li>
+						</ul>
+					</div>
+				</div>
+				</div>
+				  <!-- END OF PORTFOLIO-->
 				  
-                  <div role="tabpanel" class="tab-pane" id="Projects">				  
-                    <div>
-                      <h3 style="color: #000">
-                        <b>Two Sigma Connect - Rental Listing Inquiries</b>
-                      </h3>
-					  <h5 style="color: #bdcd49">
-                        <b>Kaggler, ranked top 7% globally</b>
-                      </h5>
-
-                      <p>
-                        Objective was to predict how popular an apartment rental listing is based on the listing content like text description, photos, number of bedrooms, price, etc. The data comes from renthop.com, an apartment listing website. I created an ensemble model using xgboost wrapped in a cross validator, stacked over KazAnova's StackNet with random forest and SVM. Features used included basic features, simple calculated features, constructed features over manager_id using tf-idf and clustered longitude-latitude positions, and finally magic feature. Model iterations were done with parameter tuning followed by averaging and geometric mean of predictions. The accuracy measure was log loss and my best model got me top 7% global ranking on Kaggle.</p>
-
-                      <p><b>Skills used:</b> Python, NLTK, SVM, K-Means, Random Forest, XGBoost with Cross Validation, StackNet by KazAnova.</p>
-					  <h5 style="color: #bdcd49">
-                        <b>Mar 2017 – May 2017</b>
-                      </h5>
-                    </div>
-                    <br>                    
-					<div>
-                      <h3 style="color: #000">
-                        <b>Careerletics Consumer - Career path finder</b>
-                      </h3>
-					  <h5 style="color: #bdcd49">
-                        <b>Head of Research, iPredictt</b>
-                      </h5>
-
-                      <p>
-                        Careerletics is a career path decision-making platform which allows a user to analyze their career direction and magnitude of growth. The project is divided into 3 parts - Front-end development, Database development, and Algorithm. An exhaustive database linking industries & functions to skill sets, companies, job positions and colleges was created by using natural language processing over a database of half a million resumes documents (without any specific template). This database was then utilized to identify qualification, skills and experience information from user resumes via a parser. An algorithm was developed to create user personas followed by a semi-supervised model to detect affinity and create soft clusters among the users. Next, gap-analysis, as well as summary statistics, are calculated for each user against their cluster and visualized on the front-end. Finally, recommendations are made using a vast array of APIs. The platform and algorithm are patented under iPredictt Data Science Labs.</p>
-
-                      <p><b>Skills used:</b> Python, NLTK, Expectation maximization, Gaussian mixture model, Hierarchical clustering.</p>
-					  <h5 style="color: #bdcd49">
-                        <b>Jul 2016 – Present</b>
-                      </h5>
-                    </div>
-                    <br>
-                    <div>
-                      <h3 style="color: #000">
-                        <b>Careerletics Enterprise - Recruitment decision making platform</b>
-                      </h3>
-					  <h5 style="color: #bdcd49">
-                        <b>Head of Research, iPredictt</b>
-                      </h5>
-
-                      <p>
-                        Careerletics Enterprise is an intelligent platform for recruiters which assists them with pre-hire decision making and reduces the hiring lifecycle from a few weeks to a few minutes. It assists a recruiter by parsing resume data, quantifying candidate metrics, calculating relevance against a job description and ranking candidates by a metric called employability score. First, an exhaustive database linking industries & functions to skill sets, companies, job positions and colleges was created by using natural language processing over a database of half a million resumes documents (without any specific template). This database was then utilized to identify qualification, skills and experience information from user resumes via a parser. This was coupled with a chatbot to collect missing candidate information directly. Next, a stacked model for filtering, relevance matching, and competitive ranking was developed. Candidates which were finally selected by the recruiter are captured and used as a feedback the self-learning algorithm to adjust parameter weights. The platform and algorithm are patented under iPredictt Data Science Labs.</p>
-
-                      <p><b>Skills used:</b> Python, NLTK, Expectation maximization, Gaussian mixture model, Gradient Boosting, PCA.</p>
-					  <h5 style="color: #bdcd49">
-                        <b>Jul 2016 – Present</b>
-                      </h5>
-                    </div>
-                    <br>
-                    <div>
-                      <h3 style="color: #000">
-                        <b>Analysis of Political Affiliation and Sentiment over Social Media</b>
-                      </h3>
-					  <h5 style="color: #bdcd49">
-                        <b>Data Science Lead, iPredictt</b>
-                      </h5>
-
-                      <p>
-                        The objective was to understand the sentiment of a popular Indian News Network with respect to different political parties over Twitter and Facebook and compare the sentiments of other competitor news networks against it. Tweepy & web scraping was used to pull data via Twitter and Facebook, followed by data cleaning, feature generation, and NLP treatment to generate a sentiment report. The sectors of analysis included comparing political party affiliation, quantifying shared sentiment across newsgroups, detecting targeted negative propaganda over social media and forecasting topic-wise sentiment over Twitter.</p>
-
-                      <p><b>Skills used:</b> Python, Tweepy, NLTK, Topic Modelling, Sentiment Analysis.</p>
-					  <h5 style="color: #bdcd49">
-                        <b>Jan 2016 – May 2016</b>
-                      </h5>
-                    </div>
-                    <br>
-					<div>
-                      <h3 style="color: #000">
-                        <b>Optimize Ad Exchange networks for increasing campaign value</b>
-                      </h3>
-					  <h5 style="color: #bdcd49">
-                        <b>Data Science Lead, iPredictt</b>
-                      </h5>
-
-                      <p>
-                        The objective was to create a platform for a 60cr turnover Mobile Ad Exchange startup to optimize ad campaign time and direction which involves selecting the right publisher for the advertising campaign as a factor of time of the day, conversion rates, customer target category and network type. Variable importance calculated via Decision trees to categorize publisher efficiency and thus analyze trends better, while click probability for cookie ids was calculated by building a logistic model. The campaign statistics were visualized using charts and Sankey diagrams over an R-Shiny server.</p>
-
-                      <p><b>Skills used:</b> R, R-Shiny, Decision trees, Random Forest, Logistic regression.</p>
-					  <h5 style="color: #bdcd49">
-                        <b>Jul 2015 – Dec 2015</b>
-                      </h5>
-                    </div>
-                    <br>
-					<div>
-                      <h3 style="color: #000">
-                        <b>Supply Chain network optimization and planning</b>
-                      </h3>
-					  <h5 style="color: #bdcd49">
-                        <b>Senior Data Scientist, Mu-Sigma</b>
-                      </h5>
-
-                      <p>
-                        Client was a fortune 50 multinational computer technology giant. The project objective was to analyze backlogs and develop a network flow optimization model for Americas, EMEIA and Asia logistics team to enhance the efficiency of respective supply chains. A model was built on 3 years of backlog data with stage-wise & SKU-wise flow's starting from Manufacturing to Fulfillment Centers/Customers. Missing data were imputed using decision trees followed by Linear programming to minimize the objective function of the number of backlogs in each network. The resulting model was visualized using Tableau and shared with 1,000+ stakeholders and executives from Singapore, Austin, Hong Kong, London, Korea and India offices.</p>
-
-                      <p><b>Skills used:</b> SQL, R,  Decision Trees, Linear Programming, Tableau.</p>
-					  <h5 style="color: #bdcd49">
-                        <b>Nov 2014 – Mar 2015</b>
-                      </h5>
-                    </div>
-                    <br>					
-					<div>
-                      <h3 style="color: #000">
-                        <b>Theoretical Win prediction for customers of a Casino Giant</b>
-                      </h3>
-					  <h5 style="color: #bdcd49">
-                        <b>Senior Data Scientist, Mu-Sigma</b>
-                      </h5>
-
-                      <p>
-                        A Fortune 500 Casino Giant used certain business rules to calculate ADT (Accumulated daily theoretical win) for each of their customers to decide the category of their marketing spend which had an extremely low accuracy (32%). The objective was to build a regression model to predict ADT values for customers based on gambling spends, wins and other visit information. An ensemble model was created based on analysis of variation in the test variable (ADT). A certain segment of the customer population (which was primarily low spend customers) was tackled using generalized linear models while remaining segment (which comprised primarily of high spend customers) was tackled using 11 separate Support Vector Machine classification models. The test variable for these was bucketed into spend categories instead of using a continuous ADT value. The accuracy of this model was much higher than the base model (53%). The exercise was followed by creating a financial modeling simulator using these predictions to generate best and worst case profit/loss scenarios over variable marketing spends.</p>
-
-                      <p><b>Skills used:</b> Python, ANOVA, K-means clustering, Support vector machines, Monte-Carlo simulation.</p>
-					  <h5 style="color: #bdcd49">
-                        <b>Jun 2014 – Oct 2014</b>
-                      </h5>
-                    </div>
-                    <br>
-					<div>
-                      <h3 style="color: #000">
-                        <b>Driver analysis over unexpected ROI decline</b>
-                      </h3>
-					  <h5 style="color: #bdcd49">
-                        <b>Data Scientist, Mu-Sigma</b>
-                      </h5>
-
-                      <p>
-                        The 2nd largest toy manufacturer brand showed quarter on quarter ROI decline of 20% which amplified further during the latest holiday season. Clear understanding was required on what were the prime causes of this decline. A five dimension deterministic model was created to analyze parameters calculated through web analytics. This model was then passed through regression analysis for generating estimates for each parameter as a substitute for driver towards the sales decline. A major realization by the end of the exercise was that the decline was primarily due to cannibalization by a fresh brand they launched themselves but for a higher age category. This allowed them to take major decisions in time to stabilize the curve to around 8% decline in the coming quarter and also affected the launch dates of their upcoming brands.</p>
-
-                      <p><b>Skills used:</b> R, Deterministic modeling, Web analytics, Generalized regression models.</p>
-					  <h5 style="color: #bdcd49">
-                        <b>Dec 2013 – May 2014</b>
-                      </h5>
-                    </div>
-                    <br>					
-					<div>
-                      <h3 style="color: #000">
-                        <b>Customer Segmentation and Targeting for retail products</b>
-                      </h3>
-					  <h5 style="color: #bdcd49">
-                        <b>Data Scientist, Mu-Sigma</b>
-                      </h5>
-
-                      <p>
-                        Client was the world's biggest home improvement retail company. The objective was to create customer segments based on their behavioral traits, spend patterns and volatility in purchase categories which would allow the client to understand and target better. Customer segmentation based on transaction data was done using RFM segmentation followed by item-based and user-based collaborative filters to create purchase category recommendations for customized targeting. This directly affected client’s top line for specific departments such as gardening and home repair.</p>
-
-                      <p><b>Skills used:</b> SQL, Excel, R, RFM Segmentation, Collaborative Filtering.</p>
-					  <h5 style="color: #bdcd49">
-                        <b>May 2013 – Nov 2013</b>
-                      </h5>
-                    </div>
-                    <br>					
-					<div>
-                      <h3 style="color: #000">
-                        <b>Real Time in-store traffic analysis using Brickstream</b>
-                      </h3>
-					  <h5 style="color: #bdcd49">
-                        <b>Data Scientist, Mu-Sigma</b>
-                      </h5>
-
-                      <p>
-                        Client was the world's biggest home improvement retail company. They were on a pilot with Brickstream, which is a Video analytics software which uses aisle camera footage to virtually create trip lines and dwell zones. Exhaustive reports were created for the data collected by Bricksteam enabled cameras on a weekly level. Trip line analysis allowed client to predict traffic hours in real time and accordingly align their store associates for coming days/weeks, thereby improving resource management. Dwell analysis enabled the client to understand dwell times of customers at specific aisles positions thereby enabling them to take decisions on shelf space management.</p>
-
-                      <p><b>Skills used:</b> Brickstream, SQL, R.</p>
-					  <h5 style="color: #bdcd49">
-                        <b>Nov 2012 – Apr 2013</b>
-                      </h5>
-                    </div>
-                    <br>
-					
-					
-				  </div>
-                 
-
-				<!-- Data Science -->
-
-				 <div role="tabpanel" class="tab-pane" id="Analytics">
-                    <div>					  
+				<!--START OF PROJECTS-->
+				<div role="tabpanel" class="tab-pane" id="Projects">
+					<div class="row">
+						<div class="col-xs-12 col-sm-12 col-md-8">
+							<div class="row visible-xs visible-sm" style="padding-left:15px">
+								<img src="img/timeline_horiz.png" class="img-responsive center-block" width="90%">
+								<br>
+							</div>
+						
+						    <div class="row" style="padding-left:15px">
+							
+								<h3>
+									<b>Two Sigma Connect - Rental Listing Inquiries</b>
+								</h3>
+								<h5 style="color: #bdcd49">
+									<b>Kaggler, ranked top 7% globally</b>
+								</h5>
+			
+								<p>
+									Objective was to predict how popular an apartment rental listing is based on the listing content like text description, photos, number of bedrooms, price, etc. The data comes from renthop.com, an apartment listing website. I created an ensemble model using xgboost wrapped in a cross validator, stacked over KazAnova's StackNet with random forest and SVM. Features used included basic features, simple calculated features, constructed features over manager_id using tf-idf and clustered longitude-latitude positions, and finally magic feature. Model iterations were done with parameter tuning followed by averaging and geometric mean of predictions. The accuracy measure was log loss and my best model got me top 7% global ranking on Kaggle.</p>
+			
+								<p><b>Skills used:</b> Python, NLTK, SVM, K-Means, Random Forest, XGBoost with Cross Validation, StackNet by KazAnova.</p>
+								<h5 style="color: #bdcd49">
+									<b>Mar 2017 – May 2017</b>
+								</h5>
+								</div>
+								<br>                    
+								<div class="row" style="padding-left:15px">
+								<h3>
+									<b>Careerletics Consumer - Career path finder</b>
+								</h3>
+								<h5 style="color: #bdcd49">
+									<b>Head of Research, iPredictt</b>
+								</h5>
+			
+								<p>
+									Careerletics is a career path decision-making platform which allows a user to analyze their career direction and magnitude of growth. The project is divided into 3 parts - Front-end development, Database development, and Algorithm. An exhaustive database linking industries & functions to skill sets, companies, job positions and colleges was created by using natural language processing over a database of half a million resumes documents (without any specific template). This database was then utilized to identify qualification, skills and experience information from user resumes via a parser. An algorithm was developed to create user personas followed by a semi-supervised model to detect affinity and create soft clusters among the users. Next, gap-analysis, as well as summary statistics, are calculated for each user against their cluster and visualized on the front-end. Finally, recommendations are made using a vast array of APIs. The platform and algorithm are patented under iPredictt Data Science Labs.</p>
+			
+								<p><b>Skills used:</b> Python, NLTK, Expectation maximization, Gaussian mixture model, Hierarchical clustering.</p>
+								<h5 style="color: #bdcd49">
+									<b>Jul 2016 – Present</b>
+								</h5>
+								</div>
+								<br>
+								<div class="row" style="padding-left:15px">
+								<h3>
+									<b>Careerletics Enterprise - Recruitment decision making platform</b>
+								</h3>
+								<h5 style="color: #bdcd49">
+									<b>Head of Research, iPredictt</b>
+								</h5>
+			
+								<p>
+									Careerletics Enterprise is an intelligent platform for recruiters which assists them with pre-hire decision making and reduces the hiring lifecycle from a few weeks to a few minutes. It assists a recruiter by parsing resume data, quantifying candidate metrics, calculating relevance against a job description and ranking candidates by a metric called employability score. First, an exhaustive database linking industries & functions to skill sets, companies, job positions and colleges was created by using natural language processing over a database of half a million resumes documents (without any specific template). This database was then utilized to identify qualification, skills and experience information from user resumes via a parser. This was coupled with a chatbot to collect missing candidate information directly. Next, a stacked model for filtering, relevance matching, and competitive ranking was developed. Candidates which were finally selected by the recruiter are captured and used as a feedback the self-learning algorithm to adjust parameter weights. The platform and algorithm are patented under iPredictt Data Science Labs.</p>
+			
+								<p><b>Skills used:</b> Python, NLTK, Expectation maximization, Gaussian mixture model, Gradient Boosting, PCA.</p>
+								<h5 style="color: #bdcd49">
+									<b>Jul 2016 – Present</b>
+								</h5>
+								</div>
+								<br>
+								<div class="row" style="padding-left:15px">
+								<h3>
+									<b>Analysis of Political Affiliation and Sentiment over Social Media</b>
+								</h3>
+								<h5 style="color: #bdcd49">
+									<b>Data Science Lead, iPredictt</b>
+								</h5>
+			
+								<p>
+									The objective was to understand the sentiment of a popular Indian News Network with respect to different political parties over Twitter and Facebook and compare the sentiments of other competitor news networks against it. Tweepy & web scraping was used to pull data via Twitter and Facebook, followed by data cleaning, feature generation, and NLP treatment to generate a sentiment report. The sectors of analysis included comparing political party affiliation, quantifying shared sentiment across newsgroups, detecting targeted negative propaganda over social media and forecasting topic-wise sentiment over Twitter.</p>
+			
+								<p><b>Skills used:</b> Python, Tweepy, NLTK, Topic Modelling, Sentiment Analysis.</p>
+								<h5 style="color: #bdcd49">
+									<b>Jan 2016 – May 2016</b>
+								</h5>
+								</div>
+								<br>
+								<div class="row" style="padding-left:15px">
+								<h3>
+									<b>Optimize Ad Exchange networks for increasing campaign value</b>
+								</h3>
+								<h5 style="color: #bdcd49">
+									<b>Data Science Lead, iPredictt</b>
+								</h5>
+			
+								<p>
+									The objective was to create a platform for a 60cr turnover Mobile Ad Exchange startup to optimize ad campaign time and direction which involves selecting the right publisher for the advertising campaign as a factor of time of the day, conversion rates, customer target category and network type. Variable importance calculated via Decision trees to categorize publisher efficiency and thus analyze trends better, while click probability for cookie ids was calculated by building a logistic model. The campaign statistics were visualized using charts and Sankey diagrams over an R-Shiny server.</p>
+			
+								<p><b>Skills used:</b> R, R-Shiny, Decision trees, Random Forest, Logistic regression.</p>
+								<h5 style="color: #bdcd49">
+									<b>Jul 2015 – Dec 2015</b>
+								</h5>
+								</div>
+								<br>
+								<div class="row" style="padding-left:15px">
+								<h3>
+									<b>Supply Chain network optimization and planning</b>
+								</h3>
+								<h5 style="color: #bdcd49">
+									<b>Senior Data Scientist, Mu-Sigma</b>
+								</h5>
+			
+								<p>
+									Client was a fortune 50 multinational computer technology giant. The project objective was to analyze backlogs and develop a network flow optimization model for Americas, EMEIA and Asia logistics team to enhance the efficiency of respective supply chains. A model was built on 3 years of backlog data with stage-wise & SKU-wise flow's starting from Manufacturing to Fulfillment Centers/Customers. Missing data were imputed using decision trees followed by Linear programming to minimize the objective function of the number of backlogs in each network. The resulting model was visualized using Tableau and shared with 1,000+ stakeholders and executives from Singapore, Austin, Hong Kong, London, Korea and India offices.</p>
+			
+								<p><b>Skills used:</b> SQL, R,  Decision Trees, Linear Programming, Tableau.</p>
+								<h5 style="color: #bdcd49">
+									<b>Nov 2014 – Mar 2015</b>
+								</h5>
+								</div>
+								<br>					
+								<div class="row" style="padding-left:15px">
+								<h3>
+									<b>Theoretical Win prediction for customers of a Casino Giant</b>
+								</h3>
+								<h5 style="color: #bdcd49">
+									<b>Senior Data Scientist, Mu-Sigma</b>
+								</h5>
+			
+								<p>
+									A Fortune 500 Casino Giant used certain business rules to calculate ADT (Accumulated daily theoretical win) for each of their customers to decide the category of their marketing spend which had an extremely low accuracy (32%). The objective was to build a regression model to predict ADT values for customers based on gambling spends, wins and other visit information. An ensemble model was created based on analysis of variation in the test variable (ADT). A certain segment of the customer population (which was primarily low spend customers) was tackled using generalized linear models while remaining segment (which comprised primarily of high spend customers) was tackled using 11 separate Support Vector Machine classification models. The test variable for these was bucketed into spend categories instead of using a continuous ADT value. The accuracy of this model was much higher than the base model (53%). The exercise was followed by creating a financial modeling simulator using these predictions to generate best and worst case profit/loss scenarios over variable marketing spends.</p>
+			
+								<p><b>Skills used:</b> Python, ANOVA, K-means clustering, Support vector machines, Monte-Carlo simulation.</p>
+								<h5 style="color: #bdcd49">
+									<b>Jun 2014 – Oct 2014</b>
+								</h5>
+								</div>
+								<br>
+								<div class="row" style="padding-left:15px">
+								<h3>
+									<b>Driver analysis over unexpected ROI decline</b>
+								</h3>
+								<h5 style="color: #bdcd49">
+									<b>Data Scientist, Mu-Sigma</b>
+								</h5>
+			
+								<p>
+									The 2nd largest toy manufacturer brand showed quarter on quarter ROI decline of 20% which amplified further during the latest holiday season. Clear understanding was required on what were the prime causes of this decline. A five dimension deterministic model was created to analyze parameters calculated through web analytics. This model was then passed through regression analysis for generating estimates for each parameter as a substitute for driver towards the sales decline. A major realization by the end of the exercise was that the decline was primarily due to cannibalization by a fresh brand they launched themselves but for a higher age category. This allowed them to take major decisions in time to stabilize the curve to around 8% decline in the coming quarter and also affected the launch dates of their upcoming brands.</p>
+			
+								<p><b>Skills used:</b> R, Deterministic modeling, Web analytics, Generalized regression models.</p>
+								<h5 style="color: #bdcd49">
+									<b>Dec 2013 – May 2014</b>
+								</h5>
+								</div>
+								<br>					
+								<div class="row" style="padding-left:15px">
+								<h3>
+									<b>Customer Segmentation and Targeting for retail products</b>
+								</h3>
+								<h5 style="color: #bdcd49">
+									<b>Data Scientist, Mu-Sigma</b>
+								</h5>
+			
+								<p>
+									Client was the world's biggest home improvement retail company. The objective was to create customer segments based on their behavioral traits, spend patterns and volatility in purchase categories which would allow the client to understand and target better. Customer segmentation based on transaction data was done using RFM segmentation followed by item-based and user-based collaborative filters to create purchase category recommendations for customized targeting. This directly affected client’s top line for specific departments such as gardening and home repair.</p>
+			
+								<p><b>Skills used:</b> SQL, Excel, R, RFM Segmentation, Collaborative Filtering.</p>
+								<h5 style="color: #bdcd49">
+									<b>May 2013 – Nov 2013</b>
+								</h5>
+								</div>
+								<br>					
+								<div class="row" style="padding-left:15px">
+								<h3>
+									<b>Real Time in-store traffic analysis using Brickstream</b>
+								</h3>
+								<h5 style="color: #bdcd49">
+									<b>Data Scientist, Mu-Sigma</b>
+								</h5>
+			
+								<p>
+									Client was the world's biggest home improvement retail company. They were on a pilot with Brickstream, which is a Video analytics software which uses aisle camera footage to virtually create trip lines and dwell zones. Exhaustive reports were created for the data collected by Bricksteam enabled cameras on a weekly level. Trip line analysis allowed client to predict traffic hours in real time and accordingly align their store associates for coming days/weeks, thereby improving resource management. Dwell analysis enabled the client to understand dwell times of customers at specific aisles positions thereby enabling them to take decisions on shelf space management.</p>
+			
+								<p><b>Skills used:</b> Brickstream, SQL, R.</p>
+								<h5 style="color: #bdcd49">
+									<b>Nov 2012 – Apr 2013</b>
+									<br>
+									<br>
+								</h5>
+								</div>
+						
+						</div>
+						
+						<div class="hidden-xs hidden-sm col-md-4"">
+						<img src="img/timeline_vert.png" class="img-responsive center-block" width="60%" style="padding-top: 30px;">
+						</div>
+					</div>
+				</div>
+				<!-- END OF PROJECTS--> 
+				
+				
+				<!-- START OF BLOG -->
+				<div role="tabpanel" class="tab-pane" id="Blog">
+				<div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-8">					  
                       <h3 style="color: #000"><b>The Tale of a Raindrop</b></h3>
 					  <h5 style="color: #bdcd49"><b>Mumbai, 23rd Jun 2017</b></h5>
-					  <h5><b><span style="background-color: #bdcd49;">#Literature</span> <span style="background-color: #bdcd49;">#Raindrops</span> <span style="background-color: #bdcd49;">#MumbaiRains</span></b></h5>
+					  <h5><b>#Literature #Raindrops #MumbaiRains</b></h5>
                       <p>Mid June, the heavy breeze pulls the beautiful puffs of vapor over the busy folk of Mumbai. Walking to my office I take a quick peek at the sky. "I wish it rains today", I think to myself and move on. Thats my world, the world of a social animal. I, like all those I know, have come to embrace the monotony. But somewhere high up in the sky, a little vapor from a small lake near a small village outside Mumbai, suddenly found himself among millions, if not billions of other vapors just like him, all floating together. They didnt act, they didnt react, they just followed their shepherd, the wind. They all trusted this current, this force of nature their master....</p>
 					  <a href="raindrop.html" target="_blank"><button class="button" style="vertical-align:middle"><span>Read More </span></button></a>
-                    </div>
+                    <br>
 					<br>
-					<br>
-                    <div>					  
+					</div>
+                    <div class="col-xs-12 col-sm-12 col-md-8">					  
                       <h3 style="color: #000"><b>Visualizations for EDA in Python</b></h3>
 					  <h5 style="color: #bdcd49"><b>New Delhi, 15th Apr 2017</b></h5>
-					  <h5><b><span style="background-color: #bdcd49;">#DataScience</span> <span style="background-color: #bdcd49;">#Visualizations</span> <span style="background-color: #bdcd49;">#Seaborn</span> <span style="background-color: #bdcd49;">#Notebook</span></b></h5>
+					  <h5><b>#DataScience #Visualizations #Seaborn #Notebook</b></h5>
                       <p>Distributions, correlations and data variability are some of the most important tasks before feature engineering begins. One may consider these as the first major project stage a Data Scientist needs to be able to perform. A thorough exploration has not only helped me understand the data at hand, but also form basic notions about the ballparks and behavior of given features. Ballparks help a data scientist avoid logical errors during feature engineering. In this notebook I detail the most effective way I found to generate charts in a standardized way for understanding data during the exploration phase of the project. These primarily utilize the grid method to create a canvas for then plotting charts by categories. In a sense, its similar to data grouping in a visual way....</p>
 					  <a href="visualizations.html" target="_blank"><button class="button" style="vertical-align:middle"><span>Read More </span></button></a>
-                    </div>
+                    <br>
 					<br>
-					<br>
-					<div>					  
+					</div>
+					<div class="col-xs-12 col-sm-12 col-md-8">					  
                       <h3 style="color: #000"><b>Group by & Aggregate using Pandas</b></h3>
                       <h5 style="color: #bdcd49"><b>New Delhi, 25th Mar 2017</b></h5>
-					  <h5><b><span style="background-color: #bdcd49;">#DataScience</span> <span style="background-color: #bdcd49;">#DataGrouping</span> <span style="background-color: #bdcd49;">#Notebook</span></b></h5>
+					  <h5><b>#DataScience #DataGrouping #Notebook</b></h5>
                       <p>Data Grouping is probably the most used concept in the field of data analysis. Almost every scripting language builds its foundation over grouping data by categories of a multi-dimensional variable. A data scientist uses this for summarizing data for analysis as well as changing the level at which data can be useful for a model. Example, transaction level data needs to be summarized at customer level data before predicting their spend. Usecases like these are where languages like SQL are very useful with their group by clauses. However python isn't too far behind. Pandas provides a large variety of methods which do so much more than the standard SQL grouping. This combined with the aggregate methods gives a Data Scientist a strong grasp over data handling....</p>
 					  <a href="groupby.html" target="_blank"><button class="button" style="vertical-align:middle"><span>Read More </span></button></a>
-                    </div>
+                    <br>
 					<br>
+					</div>
+
                   </div>
-				  
- 
-				  <!-- Design -->
-				  
-				  
-                  <div role="tabpanel" class="tab-pane" id="Design">						
-								<section class="no-padding" id="portfolio">
-									<div class="container-fluid">
-										
-										<!--Row 1-->
-										<h3 style="color: #000"><b>Branding </b></h3>
-										<p>The first graphic design project I ever picked up was for a logo design. I enjoy the amount of thought that goes into creating something so tiny, ensuring maximum design sense and asthethics pushed into a minimalistic object. This is followed by placing the logo into corresponding branding mockups that give the viewer a unique peek into how the logo object will look under different lights and variations. I have been since developing fresh ideas and mockup templates which allow me to accelerate my future branding design exercises. Following are a few of my most successful designs.</p> 
+				</div>
+				<!-- END OF BLOG -->
+				
+				<!-- START OF DESIGN -->
+				<div role="tabpanel" class="tab-pane" id="Design">
+						<div class="row">
+							<div class="col-xs-12">
+							<h3><span class="bright">Graphic Design</span> is a hobby of mine.</h3>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-lg-4 col-sm-6" style="padding-top: 30px;">
+								<a class="portfolio-box">
+									<img src="art/logo_1.png" class="img-responsive" alt="">
+									<div class="portfolio-box-caption">
+										<div class="portfolio-box-caption-content">
+											<div class="project-category text-faded">
+												March 14, 2016	
+											</div>
+											<div class="project-name">
+												Logo : Asehgal.com																
+											</div>
+											<br>
+											<div class="project-category text-faded">
+												<p>Lighting with radial gradients (dithering), shadowing and emboss effects.</p>
+												<p>Wacom Intuos, Adobe Photoshop CS6</p>
+											</div>
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="col-lg-4 col-sm-6" style="padding-top: 30px;">
+								<a class="portfolio-box">
+									<img src="art/logo_3.png" class="img-responsive" alt="">
+									<div class="portfolio-box-caption">
+										<div class="portfolio-box-caption-content">
+											<div class="project-category text-faded">
+												March 18, 2016	
+											</div>
+											<div class="project-name">
+												Logo : iPredictt Wavelength<sup>tm</sup> 															
+											</div>
+											<br>
+											<div class="project-category text-faded">
+												<p>Mobile application connects "wavelength friends" using machine learning based profile matchmaking.</p>
+												<p>Wacom Intuos, Adobe Photoshop CS6</p>
+											</div>															
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="col-lg-4 col-sm-6" style="padding-top: 30px;">
+								<a class="portfolio-box">
+									<img src="art/logo_2.png" class="img-responsive" alt="">
+									<div class="portfolio-box-caption">
+										<div class="portfolio-box-caption-content">
+											<div class="project-category text-faded">
+												December 9, 2010 | Remake March 15, 2016	
+											</div>
+											<div class="project-name">
+												Logo : Golf & Sports Pvt. Ltd.															
+											</div>
+											<br>
+											<div class="project-category text-faded">
+												<p>Design for a golf import company with initials G & S.</p>
+												<p>Idea credits : Vijay Krishna, Paritosh Chhibber
+												<p>Adobe Photoshop CS4, GIMP</p>
+											</div>
+										</div>
+									</div>
+								</a>
+							</div>
+						</div>
+						<!--Row 1 end-->
+						
 										<div class="row">
-											<div class="col-lg-4 col-sm-6" style="padding-top: 10px;">
+											<div class="col-lg-4 col-sm-6" style="padding-top: 30px;">
 												<a class="portfolio-box">
-													<img src="art/logo_1.png" class="img-responsive" alt="">
+													<img src="art/Fisherman.png" class="img-responsive" alt="">
 													<div class="portfolio-box-caption">
 														<div class="portfolio-box-caption-content">
 															<div class="project-category text-faded">
-																March 14, 2016	
+																March 19, 2016	
 															</div>
 															<div class="project-name">
-																Logo : Asehgal.com																
+																Art : Fisherman															
 															</div>
 															<br>
 															<div class="project-category text-faded">
-																<p>Lighting with radial gradients (dithering), shadowing and emboss effects.</p>
+																<p>“My big fish must be somewhere.” - The Old man and the Sea</p>
 																<p>Wacom Intuos, Adobe Photoshop CS6</p>
 															</div>
 														</div>
 													</div>
 												</a>
 											</div>
-											<div class="col-lg-4 col-sm-6" style="padding-top: 10px;">
+										
+											<div class="col-lg-4 col-sm-6" style="padding-top: 30px;">
 												<a class="portfolio-box">
-													<img src="art/logo_3.png" class="img-responsive" alt="">
+													<img src="art/Moonlight.png" class="img-responsive" alt="">
 													<div class="portfolio-box-caption">
 														<div class="portfolio-box-caption-content">
 															<div class="project-category text-faded">
-																March 18, 2016	
+																March 15, 2016	
 															</div>
 															<div class="project-name">
-																Logo : iPredictt Wavelength<sup>tm</sup> 															
+																Art : Moonlight																
 															</div>
 															<br>
 															<div class="project-category text-faded">
-																<p>Mobile application connects "wavelength friends" using machine learning based profile matchmaking.</p>
+																<p>"The moon was up, painting the world silver, making things look just a little more alive"</p>
 																<p>Wacom Intuos, Adobe Photoshop CS6</p>
+															</div>
+														</div>
+													</div>
+												</a>
+											</div>
+											<div class="col-lg-4 col-sm-6" style="padding-top: 30px;">
+												<a class="portfolio-box">
+													<img src="art/Landscape1.png" class="img-responsive" alt="">
+													<div class="portfolio-box-caption">
+														<div class="portfolio-box-caption-content">
+															<div class="project-category text-faded">
+																February 22, 2016
+															</div>
+															<div class="project-name">
+																Art : Flatland														
+															</div>
+															<br>
+															<div class="project-category text-faded">
+																<p>Digital art landscape with basic lighting effects.</p>
+																<p>Wacom Intuos, GIMP</p>
 															</div>															
 														</div>
 													</div>
 												</a>
 											</div>
-											<div class="col-lg-4 col-sm-6" style="padding-top: 10px;">
+										</div>
+										<!--Row 3 end-->	
+										<div class="row">
+											<div class="col-lg-4 col-sm-6" style="padding-top: 30px;">
 												<a class="portfolio-box">
-													<img src="art/logo_2.png" class="img-responsive" alt="">
+													<img src="art/pedit1.png" class="img-responsive" alt="">
 													<div class="portfolio-box-caption">
 														<div class="portfolio-box-caption-content">
 															<div class="project-category text-faded">
-																December 9, 2010 | Remake March 15, 2016	
+																February 10, 2016	
 															</div>
 															<div class="project-name">
-																Logo : Golf & Sports Pvt. Ltd.															
+																p-Manip : Dense Forest 3																
 															</div>
 															<br>
 															<div class="project-category text-faded">
-																<p>Design for a golf import company with initials G & S.</p>
-																<p>Idea credits : Vijay Krishna, Paritosh Chhibber
-																<p>Adobe Photoshop CS4, GIMP</p>
+																<p>Photo editing, lighting with radial gradients, saturation & brightness effects on backdrop</p>
+																<p>Wacom Intuos, GIMP</p>
 															</div>
 														</div>
 													</div>
 												</a>
 											</div>
+											<div class="col-lg-4 col-sm-6" style="padding-top: 30px;">
+												<a class="portfolio-box">
+													<img src="art/pedit2.png" class="img-responsive" alt="">
+													<div class="portfolio-box-caption">
+														<div class="portfolio-box-caption-content">
+															<div class="project-category text-faded">
+																February 9, 2016
+															</div>
+															<div class="project-name">
+																p-Manip : Dense Forest 2																
+															</div>
+															<br>
+															<div class="project-category text-faded">
+																<p>Photo editing, lighting with radial gradients, saturation & brightness effects on backdrop</p>
+																<p>Wacom Intuos, GIMP</p>
+															</div>
+														</div>
+													</div>
+												</a>
+											</div>
+											<div class="col-lg-4 col-sm-6" style="padding-top: 30px;">
+												<a class="portfolio-box">
+													<img src="art/pedit3.png" class="img-responsive" alt="">
+													<div class="portfolio-box-caption">
+														<div class="portfolio-box-caption-content">
+															<div class="project-category text-faded">
+																February 9, 2016
+															</div>
+															<div class="project-name">
+																p-Manip : Dense Forest 1													
+															</div>
+															<br>
+															<div class="project-category text-faded">
+																<p>Photo editing, lighting with radial gradients, saturation & brightness effects on backdrop</p>
+																<p>Wacom Intuos, GIMP</p>
+															</div>															
+														</div>
+													</div>
+												</a>
+											</div>
+
 										</div>
-										<!--Row 1 end-->
-										
-										<br>
-										<!--Row 2-->
-										<h3 style="color: #000"><b>Web Design </b></h3>
-										<p>I am addicted to playing with static website templates using HTML, CSS and some Javascript, so much so that I gradually ended up creating a portfolio website for myself from scratch. I prefer using bootstrap library for its multi-device capabilities. I prefer setting up hosting spaces which allow dropbox integration which allows me to edit HTML files directly in Notepad++, save, auto-sync and watch the website update in live. I took up the side project of creating a website for iPredictt Data Science Labs, which is currently being used right now.</p>
+										<!--Row 4 end-->										
+						
 										<div class="row">
-											<div class="col-lg-4 col-sm-6" style="padding-top: 10px;">
+											<div class="col-lg-4 col-sm-6" style="padding-top: 30px;">
 												<a class="portfolio-box">
 													<img src="art/web_1.png" class="img-responsive" alt="">
 													<div class="portfolio-box-caption">
@@ -526,7 +571,7 @@
 													</div>
 												</a>
 											</div>
-											<div class="col-lg-4 col-sm-6" style="padding-top: 10px;">
+											<div class="col-lg-4 col-sm-6" style="padding-top: 30px;">
 												<a class="portfolio-box">
 													<img src="art/web_2.png" class="img-responsive" alt="">
 													<div class="portfolio-box-caption">
@@ -549,400 +594,28 @@
 										</div>
 										
 										<!--Row 2 end-->
+
 										
-										<br>
-										<!--Row 3-->
-										<h3 style="color: #000"><b>Digital Art </b></h3>
-										<p>Proficiency in Digital art is more or less my future goal w.r.t to my passion towards this field. I enjoy creating lighting effects and drawing landscapes. This inspiration is from watching fantasy landscape speed art on Youtube. I use a Wacom Intuos Art tablet along with Photoshop for practicing digital art.</p>
-										<div class="row">
-											<div class="col-lg-4 col-sm-6" style="padding-top: 10px;">
-												<a class="portfolio-box">
-													<img src="art/Fisherman.png" class="img-responsive" alt="">
-													<div class="portfolio-box-caption">
-														<div class="portfolio-box-caption-content">
-															<div class="project-category text-faded">
-																March 19, 2016	
-															</div>
-															<div class="project-name">
-																Art : Fisherman															
-															</div>
-															<br>
-															<div class="project-category text-faded">
-																<p>“My big fish must be somewhere.” - The Old man and the Sea</p>
-																<p>Wacom Intuos, Adobe Photoshop CS6</p>
-															</div>
-														</div>
-													</div>
-												</a>
-											</div>
-										
-											<div class="col-lg-4 col-sm-6" style="padding-top: 10px;">
-												<a class="portfolio-box">
-													<img src="art/Moonlight.png" class="img-responsive" alt="">
-													<div class="portfolio-box-caption">
-														<div class="portfolio-box-caption-content">
-															<div class="project-category text-faded">
-																March 15, 2016	
-															</div>
-															<div class="project-name">
-																Art : Moonlight																
-															</div>
-															<br>
-															<div class="project-category text-faded">
-																<p>"The moon was up, painting the world silver, making things look just a little more alive"</p>
-																<p>Wacom Intuos, Adobe Photoshop CS6</p>
-															</div>
-														</div>
-													</div>
-												</a>
-											</div>
-											<div class="col-lg-4 col-sm-6" style="padding-top: 10px;">
-												<a class="portfolio-box">
-													<img src="art/Landscape1.png" class="img-responsive" alt="">
-													<div class="portfolio-box-caption">
-														<div class="portfolio-box-caption-content">
-															<div class="project-category text-faded">
-																February 22, 2016
-															</div>
-															<div class="project-name">
-																Art : Flatland														
-															</div>
-															<br>
-															<div class="project-category text-faded">
-																<p>Digital art landscape with basic lighting effects.</p>
-																<p>Wacom Intuos, GIMP</p>
-															</div>															
-														</div>
-													</div>
-												</a>
-											</div>
-										</div>
-										<!--Row 3 end-->
-										<br>
-										<!--Row 4-->
-										<h3 style="color: #000"><b>Photoediting </b></h3>
-										<p>This is a natural successor to Digital art. Photoediting allows me to create a dream world inside a picture which held a moment of the real world. Effects such as artifical lighting, shadows and color enhancements allow me to redesign the current landscape to a picture perfect space.</p>
-										<div class="row">
-											<div class="col-lg-4 col-sm-6" style="padding-top: 10px;">
-												<a class="portfolio-box">
-													<img src="art/pedit1.png" class="img-responsive" alt="">
-													<div class="portfolio-box-caption">
-														<div class="portfolio-box-caption-content">
-															<div class="project-category text-faded">
-																February 10, 2016	
-															</div>
-															<div class="project-name">
-																p-Manip : Dense Forest 3																
-															</div>
-															<br>
-															<div class="project-category text-faded">
-																<p>Photo editing, lighting with radial gradients, saturation & brightness effects on backdrop</p>
-																<p>Wacom Intuos, GIMP</p>
-															</div>
-														</div>
-													</div>
-												</a>
-											</div>
-											<div class="col-lg-4 col-sm-6" style="padding-top: 10px;">
-												<a class="portfolio-box">
-													<img src="art/pedit2.png" class="img-responsive" alt="">
-													<div class="portfolio-box-caption">
-														<div class="portfolio-box-caption-content">
-															<div class="project-category text-faded">
-																February 9, 2016
-															</div>
-															<div class="project-name">
-																p-Manip : Dense Forest 2																
-															</div>
-															<br>
-															<div class="project-category text-faded">
-																<p>Photo editing, lighting with radial gradients, saturation & brightness effects on backdrop</p>
-																<p>Wacom Intuos, GIMP</p>
-															</div>
-														</div>
-													</div>
-												</a>
-											</div>
-											<div class="col-lg-4 col-sm-6" style="padding-top: 10px;">
-												<a class="portfolio-box">
-													<img src="art/pedit3.png" class="img-responsive" alt="">
-													<div class="portfolio-box-caption">
-														<div class="portfolio-box-caption-content">
-															<div class="project-category text-faded">
-																February 9, 2016
-															</div>
-															<div class="project-name">
-																p-Manip : Dense Forest 1													
-															</div>
-															<br>
-															<div class="project-category text-faded">
-																<p>Photo editing, lighting with radial gradients, saturation & brightness effects on backdrop</p>
-																<p>Wacom Intuos, GIMP</p>
-															</div>															
-														</div>
-													</div>
-												</a>
-											</div>
 
-										</div>
-										<!--Row 4 end-->
-										
-										<br>
-										<div class="row card">
-										<div class="col-md-7">
-										<h3 style="color: #000"><b>Quick note :</b></h3>
-										<p>I am not a professional but a graphic design hobbiest who derives his inspiration from artists across Behance and DeviantArt.</p>
-										<p><b>My setup :</b> I use an Alienware for its GPU and a Wacom Intuos Art for designing on Adobe Photoshop CS6, Illustrator CS6, GIMP and a bit of CorelDraw. G402 and Tartarus provide me programmable keys and I test me websites on my PC and Oneplus X.</p>
-										<ul class="list-inline list-unstyled text-right">
-											<li role="presentation" style="font-size:140%">
-											<a href="https://www.behance.net/akshaysehgal" target="_blank"><i class="fa fa-1x fa-fw fa-behance blackiconcolor"></i></a>
-											</li>
-										</ul>
-										</div>
-
-										<div class="col-md-5">
-										<img src="art/Tools.png" width="100%">
-										</div>
-										</div>
-									</div>
-								</section>
-
-								
-								
-					<!-- MODALS 
-							<div id="logo1" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-									<div class="modal-dialog">
-										<div class="modal-content">
-											<div class="modal-body">
-												<img src="art/logo_1.png" class="img-responsive">
-												<h3>Logo design mockup</h3>																
-												<p>Lighting with radial gradients (dithering), shadowing and emboss effects.</p>
-												<p>Wacom Intuos, Adobe Photoshop CS6</p>												
-												<p>March 14, 2016</p>	
-											</div>
-										</div>
-									</div>
-								</div>
-								<div id="vcard1" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-									<div class="modal-dialog">
-										<div class="modal-content">
-											<div class="modal-body">
-												<img src="art/vcard_1.png" class="img-responsive">
-												<h3>Art : Flatland</h3>																
-												<p>Photo editing, lighting with radial gradients, saturation & brightness effects on backdrop.</p>
-												<p>February 22, 2016</p>	
-											</div>
-										</div>
-									</div>
-								</div>
-								<div id="web1" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-									<div class="modal-dialog">
-										<div class="modal-content">
-											<div class="modal-body">
-												<img src="art/web_1.png" class="img-responsive">
-												<h3>p-Manip : Dense Forest</h3>																
-												<p>Digital art landscape with basic lighting effects.</p>
-												<p>Wacom Intuos, GIMP</p>
-												<p>February 10, 2016</p>	
-											</div>
-										</div>
-									</div>
-								</div>
-								<div id="moonlight" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-									<div class="modal-dialog">
-										<div class="modal-content">
-											<div class="modal-body">
-												<img src="art/Moonlight.png" class="img-responsive">
-												<h3>Art : Moonlight</h3>																
-												<p>"The moon was up, painting the world silver, making things look just a little more alive"</p>
-												<p>Wacom Intuos, Adobe Photoshop CS6</p>												
-												<p>March 15, 2016</p>	
-											</div>
-										</div>
-									</div>
-								</div>
-								<div id="landscape1" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-									<div class="modal-dialog">
-										<div class="modal-content">
-											<div class="modal-body">
-												<img src="art/Landscape1.png" class="img-responsive">
-												<h3>Art : Flatland</h3>																
-												<p>Photo editing, lighting with radial gradients, saturation & brightness effects on backdrop.</p>
-												<p>February 22, 2016</p>	
-											</div>
-										</div>
-									</div>
-								</div>
-								<div id="forest1" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-									<div class="modal-dialog">
-										<div class="modal-content">
-											<div class="modal-body">
-												<img src="art/Light_rays3.png" class="img-responsive">
-												<h3>p-Manip : Dense Forest</h3>																
-												<p>Digital art landscape with basic lighting effects.</p>
-												<p>Wacom Intuos, GIMP</p>
-												<p>February 10, 2016</p>	
-											</div>
-										</div>
-									</div>
-								</div>-->							
-		</div>
-				  
-				<div role="tabpanel" class="tab-pane" id="Contact"> 
-						<div class="row">
-								<div class="col-md-2 text-center"></div>
-								<div class="col-md-8 text-center">
-									<ul class="list-unstyled">
-										<li>
-										<h2><b>I can help.</b></h2>
-										</li>
-										<li>
-										<p><b>If you share my interests, need some help with your projects, want to collaborate on some designing, or just want to say <span style="background-color: #bdcd49;">Hello!</span>, then drop me a note and I will get back to you as soon as I can.</b></p>
-										</li>
-										
-								</div><div class="col-md-2 text-center"></div>
-						</div>
-						<br>
-						<div class="row">
-								
-								<div class="col-md-12 text-center">
-									<ul class="list-unstyled">
-										<li>
-										<h2><b>Get in touch.</b></h2>
-										</li>
-										<li>
-										<p><b>akshaysehgal2005@gmail.com <span style="color: #bdcd49;">||</span> Skype: akshaysehgal2005 <span style="color: #bdcd49;">||</span> Goregaon (E), Mumbai, Maharashtra, 400063</b></p>
-										</li>
-								</div>
-						</div>
-						<br>	
-						<div class="row">
-						<div class="col-md-12">
-									<h2 class="text-center"><b>Download my resume.</b></h2>
-									<br>
-									<ul class="list-unstyled list-inline text-center">
-										<li role="presentation">
-										<a href="#"><i class="fa fa-3x fa-fw fa-download grow blackiconcolor"></i></a>
-										<!-- mail/Akshay Sehgal - Resume.pdf -->
-										</li>
-									</ul>
-						</div>
-						</div>	
-						<br>
-						<div class="row">
-						<div class="col-md-12">
-										<h2 class="text-center"><b>Hang out with me.</b></h2>
-										<br>
-										<ul class="list-unstyled list-inline text-center">
-										<li role="presentation">
-										<a href="https://in.linkedin.com/in/akshay-sehgal-a5071458" target="_blank"><i class="fa fa-3x fa-fw fa-linkedin grow blackiconcolor"></i></a>
-										</li>
-										<li role="presentation">
-										<a href="https://www.facebook.com/akshay.sehgal.35" target="_blank"><i class="fa fa-3x fa-facebook fa-fw grow blackiconcolor"></i></a>
-										</li>
-										<li role="presentation">
-										<a href="https://www.behance.net/akshaysehgal" target="_blank"><i class="fa fa-3x fa-fw fa-behance blackiconcolor grow"></i></a>
-										</li>
-										<li role="presentation">
-										<a href="https://github.com/Akshaysehgal2005" target="_blank"><i class="fa fa-3x fa-fw fa-github blackiconcolor grow"></i></a>
-										</li>
-										<li role="presentation">
-										<a href="https://www.kaggle.com/akshaysehgal" target="_blank"><i class="fa fa-3x fa-code fa-fw blackiconcolor grow"></i></a>
-										</li>
-									</ul>									
-						</div>
-						</div>								
-						<br>		
-
-
-					</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-		  	  <!-- FOOTER -->
-				<footer class="section section-primary">
-				<div class="container">
-					<div class="row">
-					<div class="col-sm-12 text-center" style="color: #bdcd49">
-						<p>- Copyright 2015 <span style="color: #000"><b>&copy;</b></span> Akshay Sehgal -</p>
-						<p><span style="color: #000; font-size: 80%;"><b>All rights reserved.</b></span></p>
-					</div>
-					</div>
 				</div>
-				</footer>
-		  
-		  
-        </div>
-      </div>
-    </div>
-    <!-- /#page-content-wrapper -->
-    <!-- /#wrapper -->
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-    <!-- Menu Toggle Script -->
-    <script>
-	$("#menu-toggle").click(function(e) {
-                e.preventDefault();
-                $("#wrapper").toggleClass("toggled");
-            });
-	</script>
-	<script>
-		$("#menu-toggle1").click(function(e) {
-                e.preventDefault();
-                $("#wrapper").toggleClass("toggled");
-            });
-	</script>
-	<script>
-			$(document).ready(function() {
-				$('.field-2').hide();
-				$(".field-0").on("mouseover", function() {
-					$(".field-1").hide();
-					$(".field-2").show();
-				}).on("mouseout", function() {
-					$(".field-2").hide();
-					$(".field-1").show();
-				});
-});
-	</script>
-	
-	<script>
-	function pulsate(element) {
-		$(element || this).animate({ opacity: 0.4 }, 1500, function() {
-        $(this).animate({ opacity: 1 }, 500, pulsate);
-		});
-	}
-	
-	pulsate(".pulse")
-	</script>
-	
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+				<!-- END OF DESIGN -->
+				
+				
+				
+				 
+				</div>
+				<!-- END OF TAB PANEL-->
+			</div>
+		</div>
+		<!-- END OF MAIN PANEL -->
+		</div>
+	</div>
+	<!-- SCRIPTS -->
+	<script src="js/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/sidenav.js"></script>
 
-  ga('create', 'UA-66518016-2', 'auto');
-  ga('send', 'pageview');
 
-</script>
-
-<script>
-function centerModal() {
-    $(this).css('display', 'block');
-    var $dialog = $(this).find(".modal-dialog");
-    var offset = ($(window).height() - $dialog.height()) / 2;
-    // Center modal vertically in window
-    $dialog.css("margin-top", offset);
-}
-
-$('.modal').on('show.bs.modal', centerModal);
-$(window).on("resize", function () {
-    $('.modal:visible').each(centerModal);
-});
-</script>
-
-</body></html>
+	<!--Wrapper supreme--> 
+	</body>  
+	</html>
