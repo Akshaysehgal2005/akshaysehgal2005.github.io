@@ -22,7 +22,7 @@ function swapSecond() {
 
 
 function pulsate(element) {
-	$(element || this).animate({ opacity: 0.4 }, 2000, function() {
+	$(element || this).animate({ opacity: 0.2 }, 2500, function() {
        $(this).animate({ opacity: 1 }, 500, pulsate);
 	});
 }
