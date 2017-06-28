@@ -13,110 +13,88 @@
 	<meta property="og:description" content="Akshay Sehgal is a Data Scientist heading RnD for a Big data startup in Mumbai.">
 	<meta property="og:image" content="http://akshaysehgal.com/img/metaimg.png">
     
-    <title>Data Grouping - Akshay Sehgal</title>
+	<title>Akshay Sehgal</title>
     <link rel="shortcut icon" href="https://akshaysehgal2005.github.io/favicon_xs.ico" type="image/x-icon">
     <link rel="icon" href="https://akshaysehgal2005.github.io/favicon_xs.ico" type="image/x-icon">
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">	
     <!-- Custom CSS -->
-    <link href="css/simple-sidebar.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media
-    queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file://
-    -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head><body>
-    <div id="wrapper" class="toggled">
-      <div id="sidebar-wrapper">
-       <div class="row" id="fullscreen">
-			<div class="col-md-12 fullscreen1">
-              <div class="sidebar-nav">
-                <div class="sidebar-brand">
-                  <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">
-					<li style="color: #666666">
-					<img id="show_img" src="img/akshay.png" height="150">
-					<h1 id="hide_text"><b>Akshay Sehgal</b></h1>
-					<br>
-					<div id="hide_img">
-					<img src="img/akshay.png" width="100" class="pulse">
-					</div>
-					<div>
-					<h4 id="hide_text"><span style="color: #bdcd49"><span id="hide_text">Data</span></span> Scientist</h4>
-					<h4 id="hide_text"><span style="color: #bdcd49"><span id="hide_text">Machine Learning</span></span> Expert</h4>
-					<h4 id="hide_text"><span style="color: #bdcd49"><span id="hide_text">Analytics</span></span> Consultant</h4>
-					<h4 id="hide_text"><span style="color: #bdcd49"><span id="hide_text">Graphics</span></span> Designer</h4>
-					</div>
-					</li>
+	<link href="css/base.css" rel="stylesheet">
+	<link href="css/navbar.css" rel="stylesheet">
+	<link href="css/sidenav.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+	
+	</head>
+	<body>
+
+	<!--Wrapper supreme-->
+    <div id="wrapper">
+		<div class="row">
+		<!--START OF SIDENAV -->
+		<div id="mySidenav" class="sidenav hidden-xs">
+			<div class="sidenav-brand">
+				<div id="hide_me">
+					<a href="javascript:void(0)" onclick="closeNav();swapFirst()">
+					<!--center card-->
+					<ul class="list-unstyled">
+					<li><img src="img/akshay.png" width="120" class="pulse"></li>
+					<!--<li>
+						<h2><b>Akshay Sehgal</b></h2>
+						<h3><b>Data Scientist, Entreprenuer</b></h3>
+					</li>-->
+					</ul>
 					</a>
-                </div>
-              </div>
-            </div>
-          </div>		  
-		  
-         <!--</div>-->
-      </div>
-      <!-- /#sidebar-wrapper -->
-      <!-- Page Content -->
-      <div id="page-content-wrapper">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-md-12" style="padding-top: 25px; padding-left: 50px; padding-right: 50px;">
-              <div>
-                <ul class="nav nav-tabs field-0" role="tablist">
-                  <li role="presentation">
-                    <a href="index.html"><i class="fa fa-1x fa-fw fa-home"></i><b> Back to home</b></a>
-                  </li>
-				  <li class="pull-right">
-					<a class="field-1"><b>Akshay Sehgal</b></a>
-				  </li>
-					<li role="presentation" class="field-2 pull-right" style="font-size:140%">
-						<a href="https://www.kaggle.com/akshaysehgal" target="_blank"><i class="fa fa-1x fa-code fa-fw blackiconcolor"></i></a>
-					</li>
-					<li role="presentation" class="field-2 pull-right" style="font-size:140%">
-						<a href="https://github.com/Akshaysehgal2005" target="_blank"><i class="fa fa-1x fa-fw fa-github blackiconcolor"></i></a>
-					</li>
-					<li role="presentation" class="field-2 pull-right" style="font-size:140%">
-						<a href="https://www.behance.net/akshaysehgal" target="_blank"><i class="fa fa-1x fa-fw fa-behance blackiconcolor"></i></a>
-					</li>
-					<li role="presentation" class="field-2 pull-right" style="font-size:140%">
-						<a href="https://www.facebook.com/akshay.sehgal.35" target="_blank"><i class="fa fa-1x fa-facebook fa-fw blackiconcolor"></i></a>
-					</li>
-					<li role="presentation" class="field-2 pull-right" style="font-size:140%">
-						<a href="https://in.linkedin.com/in/akshay-sehgal-a5071458" target="_blank"><i class="fa fa-1x fa-fw fa-linkedin blackiconcolor"></i></a>
-					</li>	 <!-- https://in.linkedin.com/in/akshay-sehgal-a5071458 -->	
-				 </ul>
-                <!-- Tab panes -->
+				</div>
+				
+					<!--hidden icon-->
+				<div id="show_me" class="hidden">
+					<a href="javascript:void(0)" onclick="openNav();swapSecond()">
+						<img src="img/akshay.png" width="60" class="pulse">
+					</a>
+				</div>
+			</div>
+		</div>
+		<!-- END OF SIDENAV -->			
+
+		<!-- START OF MAIN PANEL -->
+		<div id="myMainpanel" class="mainpanel">
+			<div id="show_me_too">
+			
+				<!-- START OF NAVBAR -->
+				<div class="container-fluid">
+				<div class="navbar">
+					<div class="navbar-header">
+						<div class="visible-xs">
+							<ul class="nav nav-tabs" role="tablist">
+								<li class="active"><a href="#Portfolio" aria-controls="Portfolio" role="tab" data-toggle="tab"><i class="fa fa-1x fa-user"></i></a></li>
+								<li><a href="#Projects" aria-controls="Projects" role="tab" data-toggle="tab"><i class="fa fa-1x fa-area-chart"></i></a></li>
+								<li><a href="#Blog" aria-controls="Blog" role="tab" data-toggle="tab"><i class="fa fa-1x fa-coffee"></i></a></li>
+								<!--<li><a href="#Design" aria-controls="Design" role="tab" data-toggle="tab"><i class="fa fa-1x fa-paint-brush"></i></a></li>
+								<li><a href="#Contact" aria-controls="Contact" role="tab" data-toggle="tab"><i class="fa fa-1x fa-comments"></i></a></li>-->
+							</ul>
+						</div>
+					</div>
+					<div class="hidden-xs">
+						<ul class="nav nav-tabs" role="tablist">
+							<li><a href="index.html"><b>Back to portfolio</b></a></li>
+						</ul>
+					</div>
+				</div>
+				</div>
+				<!-- END OF NAVBAR -->
+				
+				
                 <div class="tab-content">
-                  <div role="tabpanel" class="tab-pane active" id="Portfolio" style="padding-left: 50px; padding-right: 50px">
+				
+				<!--START OF PORTFOLIO-->
+                <div role="tabpanel" class="tab-pane active" id="Portfolio">
+				<div class="row">
 
-
-
-<!-- NOTEBOOK -->
-<div class="row">
-<style>
-table, th, td {
-    border: 1px solid black;
-	font-size: 90%;	
-	padding: 5px;
-}
-.rendered_html h2, h3, h4{
-	font-weight: bold;
-}
-.rendered_html h1{
-	font-weight: bold;
-	color: 000;
-}
-
-</style>
 
 <!-- START PASTING -->
 
-<body>
+
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
 
@@ -127,7 +105,8 @@ table, th, td {
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><h1>Group by & Aggregate using Pandas</h1></p>
 <h5 style="color:#bdcd49"><b>Last updated: 25th Mar 2017</b></h5>
-<h5 style="color:#bdcd49"><b>Author: Akshay Sehgal</b></h5>
+<h5 style="color:#bdcd49"><b>Akshay Sehgal, www.akshaysehgal.com</b></h5>
+<h5 style="color:#bdcd49">Data downloadable <a href="data/titanic.csv" download>here</a> </h5>
 <p>Data Grouping is probably the most used concept in the field of data analysis. Almost every scripting language builds its foundation over grouping data by categories of a multi-dimensional variable. A data scientist uses this for summarizing data for analysis as well as changing the level at which data can be useful for a model. Example, transaction level data needs to be summarized at customer level data before predicting their spend. Usecases like these are where languages like SQL are very useful with their group by clauses. However python isn't too far behind. Pandas provides a large variety of methods which do so much more than the standard SQL grouping. This combined with the aggregate methods gives a Data Scientist a strong grasp over data handling. The objective of this notebook is to explore group by and aggregation methods on data using python library Pandas.</p>
 </div>
 </div>
@@ -983,100 +962,27 @@ Name: Age, dtype: float64
 </div>
     </div>
   </div>
-</body>
 
+
+
+  
+ 
 <!-- END PASTING -->
-</div>					
-<!-- END OF NOTEBOOK -->		
 
-					</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-		  	  <!-- FOOTER -->
-				<footer class="section section-primary">
-				<div class="container">
-					<div class="row">
-					<div class="col-sm-12 text-center" style="color: #bdcd49">
-						<p>- Copyright 2015 <span style="color: #000"><b>&copy;</b></span> Akshay Sehgal -</p>
-						<p><span style="color: #000; font-size: 80%;"><b>All rights reserved.</b></span></p>
-					</div>
-					</div>
+
 				</div>
-				</footer>
-		  
-		  
-        </div>
-      </div>
-    </div>
-    <!-- /#page-content-wrapper -->
-    <!-- /#wrapper -->
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-    <!-- Menu Toggle Script -->
-    <script>
-	$("#menu-toggle").click(function(e) {
-                e.preventDefault();
-                $("#wrapper").toggleClass("toggled");
-            });
-	</script>
-	<script>
-		$("#menu-toggle1").click(function(e) {
-                e.preventDefault();
-                $("#wrapper").toggleClass("toggled");
-            });
-	</script>
-	<script>
-			$(document).ready(function() {
-				$('.field-2').hide();
-				$(".field-0").on("mouseover", function() {
-					$(".field-1").hide();
-					$(".field-2").show();
-				}).on("mouseout", function() {
-					$(".field-2").hide();
-					$(".field-1").show();
-				});
-});
-	</script>
-	
-	<script>
-	function pulsate(element) {
-		$(element || this).animate({ opacity: 0.4 }, 1500, function() {
-        $(this).animate({ opacity: 1 }, 500, pulsate);
-		});
-	}
-	
-	pulsate(".pulse")
-	</script>
-	
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+				<!-- END OF TAB PANEL-->
+			</div>
+		</div>
+		<!-- END OF MAIN PANEL -->
+		</div>
+	</div>
+	<!-- SCRIPTS -->
+	<script src="js/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/sidenav.js"></script>
 
-  ga('create', 'UA-66518016-2', 'auto');
-  ga('send', 'pageview');
 
-</script>
-
-<script>
-function centerModal() {
-    $(this).css('display', 'block');
-    var $dialog = $(this).find(".modal-dialog");
-    var offset = ($(window).height() - $dialog.height()) / 2;
-    // Center modal vertically in window
-    $dialog.css("margin-top", offset);
-}
-
-$('.modal').on('show.bs.modal', centerModal);
-$(window).on("resize", function () {
-    $('.modal:visible').each(centerModal);
-});
-</script>
-
-</body></html>
+	<!--Wrapper supreme--> 
+	</body>  
+	</html>
