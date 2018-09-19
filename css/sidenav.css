@@ -13,6 +13,20 @@ body{background: #EDECEC; padding:0px}
 
 .sidenav {
 	height: 100%;
+	width: 100%;
+	position: fixed;
+	z-index: 1000;
+	top: 0;
+	left: 0;
+	background-color: #000;
+	overflow-x: hidden;
+	transition: 0.5s;
+	text-align:center;
+}
+
+
+.sidenav2 {
+	height: 100%;
 	width: 5%;
 	position: fixed;
 	z-index: 1000;
@@ -23,6 +37,7 @@ body{background: #EDECEC; padding:0px}
 	transition: 0.5s;
 	text-align:center;
 }
+
 
 .sidenav-brand a {
 	list-style: none;
@@ -40,6 +55,25 @@ body{background: #EDECEC; padding:0px}
 	align-items: center;
 	justify-content: center;
 }
+
+
+.sidenav-brand2 a {
+	list-style: none;
+	height: 100%;
+	width: 5%;
+	text-decoration: none;
+	background: none;
+	border-style: none;
+	padding:0px;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
 
 .hidden {
 	display: none;
