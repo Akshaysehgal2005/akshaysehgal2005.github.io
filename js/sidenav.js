@@ -28,6 +28,7 @@ function pulsate(element) {
 }
 pulsate(".pulse")
 
+
 var text = ["The journey of a thousand miles begins with one step...", "Ever tried. Ever failed. No matter. Try Again. Fail again. Fail better...", "The best preparation for tomorrow is doing your best today...","The supreme art of war is to subdue the enemy without fighting...","Good judgment comes from experience, and a lot of that comes from bad judgment...","It's not what you look at that matters, it's what you see...","Life is not a problem to be solved, but a reality to be experienced..."];
 var counter = 0;
 var elem = document.getElementById("changeText");
@@ -37,3 +38,5 @@ function change() {
     counter++;
     if(counter >= text.length) { counter = 0; }
 }
+
+
