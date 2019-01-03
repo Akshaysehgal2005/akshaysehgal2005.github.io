@@ -11796,7 +11796,7 @@ div#notebook {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="1.2-The-Bayes'-Theorem">1.2 The Bayes' Theorem<a class="anchor-link" href="#1.2-The-Bayes'-Theorem">&#182;</a></h3><p>You can get a great intuitive sense about conditional probability from lectures of Prof John Tsitsiklis (MITOpenCourseware).</p>
-<p><code>"You know know something about the world, and based on what you know, you setup a probability model and you write down probabilities about the different outcomes. Then someone gives you some new information, which changes your beliefs and thus changes the probabilities of your outcomes."</code></p>
+<p><code>"You know something about the world, and based on what you know, you setup a probability model and you write down probabilities about the different outcomes. Then someone gives you some new information, which changes your beliefs and thus changes the probabilities of your outcomes."</code></p>
 <p>In a simple sense, bayes' theorem talks about the 'new' probabilities of an experiment given that an event has occured.</p>
 <p>Let's say you have a sample space the probabilities for different events are given as below -</p>
 
@@ -11807,7 +11807,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="/img/img.jpg" width='500'></p>
+<p><img src="img.jpg" width='500'></p>
 
 </div>
 </div>
@@ -11853,7 +11853,7 @@ div#notebook {
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="1.3-Curve-fitting">1.3 Curve fitting<a class="anchor-link" href="#1.3-Curve-fitting">&#182;</a></h3><p>When working with different algorithms, its important to undertand where a particular algorithm will work and where it may not. For this, I have always found a 2 dimensional example of decision boundaries quite useful from an intuitive point of view, since the core 'nature' of the classifier retains itself in higher dimensional spaces as well. The objective is to separate the blue from the red points. The decision boundary with the confidence is plotted.</p>
 <p>As seen below (image from sklearn documentation), the naive bayes classifier is capable of fitting smooth continous decision boundaries, but fails when the data needs a high degree polynomial.</p>
-<p><img src='/img/NBclassifier.png' width=700></p>
+<p><img src='NBclassifier.PNG' width=700></p>
 
 </div>
 </div>
@@ -11864,10 +11864,7 @@ div#notebook {
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="1.4-Different-Classifiers">1.4 Different Classifiers<a class="anchor-link" href="#1.4-Different-Classifiers">&#182;</a></h3><p>Now, when you actually plan on implementing this, you will notice there are multiple classifiers available that can be used for a naive bayes model. The point of these classifiers is quite simple. The above equation calculates $P(x_i \mid y)$ in a straight forward way for features with discrete values, but what if the features are continous variables. Clearly, this will need you to 'assume' the nature of the distribution since unlike discrete valued features, where you could just sum up the number of times a discrete value occured along with the specific y class label. In this case we can use classifiers such as GaussianNB.</p>
 <p>Simply put, by choosing different classifiers, you get to choose the assumptions regarding the nature of distributions of $P(x_i \mid y)$. More about these classifiers in later sections.</p>
-<p><u>**GaussianNB**</u></p>
-<p>When your features are continous in nature, you assume that they are conditionally independent and that the data associated with each class is normally distributed. To calculate the $P(x_i \mid y)$ values, we segment the data by the class, compute mean, variance and then derive the probability distribution as below.</p>
-<p>$$P(x_i \mid y) = {1 \over \sqrt{2 \pi \sigma^2_y}}exp \Bigg(-{(x_i - \mu_y)^2 \over 2 \sigma^2_y} \Bigg)$$</p>
-
+<h4 id="GaussianNB">GaussianNB<a class="anchor-link" href="#GaussianNB">&#182;</a></h4><h4 id="MultinomialNB">MultinomialNB<a class="anchor-link" href="#MultinomialNB">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -12102,7 +12099,9 @@ Target values -  [&#39;setosa&#39; &#39;versicolor&#39; &#39;virginica&#39;]
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Gaussian-Naive-Bayes">Gaussian Naive Bayes<a class="anchor-link" href="#Gaussian-Naive-Bayes">&#182;</a></h3><p>The gaussian naive bayes classifier is for continous features and is easy to implement. The first step is to calculate the summary statistics. For gaussian classifier, we need the class-wise mean and standard deviation and we need the class priors, which is nothing but the class probability in the entire data. With these 3, we should be able to predict which class a particular sample belongs to. Following is a diagram which shows the vectorized computation of the gaussian classifier in a graphical representation.</p>
+<h3 id="Gaussian-Naive-Bayes">Gaussian Naive Bayes<a class="anchor-link" href="#Gaussian-Naive-Bayes">&#182;</a></h3><p>When your features are continous in nature, you assume that they are conditionally independent and that the data associated with each class is normally distributed. To calculate the $P(x_i \mid y)$ values, we segment the data by the class, compute mean, variance and then derive the probability distribution as below.</p>
+<p>$$P(x_i \mid y) = {1 \over \sqrt{2 \pi \sigma^2_y}}exp \Bigg(-{(x_i - \mu_y)^2 \over 2 \sigma^2_y} \Bigg)$$</p>
+<p>The first step is to calculate the summary statistics. For gaussian classifier, we need the class-wise mean and standard deviation and we need the class priors, which is nothing but the class probability in the entire data. With these 3, we should be able to predict which class a particular sample belongs to. Following is a diagram which shows the vectorized computation of the gaussian classifier in a graphical representation.</p>
 
 </div>
 </div>
@@ -12111,7 +12110,7 @@ Target values -  [&#39;setosa&#39; &#39;versicolor&#39; &#39;virginica&#39;]
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src='/img/vectorized_gaussian.png' width=800></p>
+<p><img src='vectorized_gaussian.png' width=800></p>
 
 </div>
 </div>
@@ -12607,7 +12606,7 @@ Target values -  [&#39;setosa&#39; &#39;versicolor&#39; &#39;virginica&#39;]
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The 0 here means first class 'sestosa'.</p>
+<p>The 0 here means first class 'setosa'.</p>
 <p>Few interesting notes based on this calculation -</p>
 <ol>
 <li>The prediction here is directly made using the priors matrix, classwise mean matrix and classwise standard deviation matrix.</li>
@@ -12621,9 +12620,642 @@ Target values -  [&#39;setosa&#39; &#39;versicolor&#39; &#39;virginica&#39;]
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr>
-<h3 id="Multinomial-classifier-(WIP)">Multinomial classifier (WIP)<a class="anchor-link" href="#Multinomial-classifier-(WIP)">&#182;</a></h3><h3 id="Bernoulli-classifier-(WIP)">Bernoulli classifier (WIP)<a class="anchor-link" href="#Bernoulli-classifier-(WIP)">&#182;</a></h3><hr>
+<h3 id="Multinomial-classifier">Multinomial classifier<a class="anchor-link" href="#Multinomial-classifier">&#182;</a></h3><p>Multinomial classifier is a bit more complex but is the usual choice for text based data. Here you assume that your data is distributed multinomially. Multinomial distribution is a generalized case of binomial, bernoulli and categorical distributions depending on the number of trials (n) and the number of outcomes (k). If there are only 2 possible outcomes (k=2) and multiple trials (n&gt;1) then your multinomial distribution becomes a binomial distribution.</p>
+<p>Lets say you have a few sentences with labels -</p>
+<ul>
+<li>"Great phone" - Positive</li>
+<li>"Didn't like the device" - Negative</li>
+<li>"Wonderful interface" - Positive</li>
+<li>"Horrible experience" - Negative</li>
+</ul>
+<p>Lets say you are asked to classify the sentence "Great smartphone". What you are trying to do is to just find the probability of the words "Great" and "Smartphone" to occur with the label Positive/Negative. Based on the product of the probabilities of the 2 words (remember the 'naive' assumption) you calculate which has a higher product of probabilities and then predict that as the corresponding label. This is done by simply calculating $N_w / N$ where $N_w$ is the number of times the word occurs with the label, and N is the total number of words that occur <u>with the given label</u>.</p>
+<p>Here comes the issue while doing this. If the word isn't used in the traning data (like in this case "Smartphone"), the value of the product of probabilities will become 0. How do we solve this? We use a techinque called additive smoothing (laplace smoothing) which just adds some stuff to the numerator and denominator. $P(x_i \mid y)$ is the probability $\theta_i$ of $i$ appearing in a sample belonging to $y$.</p>
+<p>$$ \hat\theta_i = {N_w + \alpha \over N + \alpha d} $$</p>
+<p>Here $\alpha$ is set to 1 incase of laplace smoothing, while $\alpha$ is set &gt; 1 for Lidstone smoothing. $N_w$ is the number of times the word occurs with that label, N is the number of words in vocabulary which occur with that label, and d is the total size of the vocabulary.</p>
+<p>Note that for the implementation I will only show the case where we use count vectorizer but for improving the model, it is important to leverage various techiniques such as stopword removal, lemmitization, tfidf vectorizer etc.
+We will start with creating a small text dataset with 2 labels.</p>
 
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[229]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="k">import</span> <span class="n">CountVectorizer</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[252]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Defining the training data</span>
+<span class="n">documents</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;quite happy with it&#39;</span><span class="p">,</span> 
+             <span class="s1">&#39;bad device&#39;</span><span class="p">,</span> 
+             <span class="s1">&#39;great job with the features&#39;</span><span class="p">,</span> 
+             <span class="s1">&#39;bad experience&#39;</span><span class="p">,</span>
+             <span class="s1">&#39;horrible device&#39;</span><span class="p">,</span>
+             <span class="s1">&#39;very happy with the product&#39;</span><span class="p">]</span>
+
+<span class="n">classes</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;positive&#39;</span><span class="p">,</span><span class="s1">&#39;negative&#39;</span><span class="p">,</span><span class="s1">&#39;positive&#39;</span><span class="p">,</span><span class="s1">&#39;negative&#39;</span><span class="p">,</span><span class="s1">&#39;negative&#39;</span><span class="p">,</span><span class="s1">&#39;positive&#39;</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[253]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Fitting the count vectorizer to get word representation for each sentence</span>
+<span class="n">cnt</span> <span class="o">=</span> <span class="n">CountVectorizer</span><span class="p">()</span>
+<span class="n">cnt_matrix</span> <span class="o">=</span> <span class="n">cnt</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">documents</span><span class="p">)</span><span class="o">.</span><span class="n">todense</span><span class="p">()</span>
+<span class="n">cnt_matrix</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[253]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(6, 14)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[362]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Creating a dataframe to calculate summary statistics later</span>
+<span class="n">training_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">cnt_matrix</span><span class="p">,</span>
+                                <span class="n">index</span> <span class="o">=</span> <span class="n">documents</span><span class="p">,</span> 
+                                <span class="n">columns</span><span class="o">=</span><span class="n">cnt</span><span class="o">.</span><span class="n">get_feature_names</span><span class="p">())</span>
+<span class="n">training_data</span><span class="p">[</span><span class="s1">&#39;Class&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">classes</span>
+<span class="n">training_data</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[362]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>bad</th>
+      <th>device</th>
+      <th>experience</th>
+      <th>features</th>
+      <th>great</th>
+      <th>happy</th>
+      <th>horrible</th>
+      <th>it</th>
+      <th>job</th>
+      <th>product</th>
+      <th>quite</th>
+      <th>the</th>
+      <th>very</th>
+      <th>with</th>
+      <th>Class</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>quite happy with it</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>positive</td>
+    </tr>
+    <tr>
+      <th>bad device</th>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>negative</td>
+    </tr>
+    <tr>
+      <th>great job with the features</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>positive</td>
+    </tr>
+    <tr>
+      <th>bad experience</th>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>negative</td>
+    </tr>
+    <tr>
+      <th>horrible device</th>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>negative</td>
+    </tr>
+    <tr>
+      <th>very happy with the product</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>positive</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[363]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Calculating label probability (priors)</span>
+<span class="n">label_proba</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">classes</span><span class="p">,</span> <span class="n">return_counts</span><span class="o">=</span><span class="kc">True</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">classes</span><span class="p">)</span>
+<span class="n">label_proba</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[363]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([0.5, 0.5])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[376]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Calculating word frequency for each word in training data (label-wise)</span>
+
+<span class="c1">## 0 = negative, 1 = positive</span>
+<span class="n">Nc</span> <span class="o">=</span> <span class="n">training_data</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;Class&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="s1">&#39;Class&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;Class&#39;</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">Nc</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[376]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>bad</th>
+      <th>device</th>
+      <th>experience</th>
+      <th>features</th>
+      <th>great</th>
+      <th>happy</th>
+      <th>horrible</th>
+      <th>it</th>
+      <th>job</th>
+      <th>product</th>
+      <th>quite</th>
+      <th>the</th>
+      <th>very</th>
+      <th>with</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2</td>
+      <td>2</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>2</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>2</td>
+      <td>1</td>
+      <td>3</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[377]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Calculating N which is the total number of word occurances associated with each label</span>
+<span class="n">N</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">Nc</span><span class="p">),</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">N</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[377]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([ 6, 14], dtype=int64)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[378]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Calculating length of vocabulary</span>
+<span class="n">d</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">cnt</span><span class="o">.</span><span class="n">get_feature_names</span><span class="p">())</span>
+<span class="n">d</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[378]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>14</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[379]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Setting value of the laplace smoothing factor alpha</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[380]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Getting theta for a single input word</span>
+<span class="k">def</span> <span class="nf">get_thetas</span><span class="p">(</span><span class="n">word</span><span class="p">):</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">word_probabilities</span><span class="p">[</span><span class="n">word</span><span class="p">])</span> <span class="o">+</span> <span class="n">a</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">N</span><span class="o">+</span><span class="n">d</span><span class="p">)</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="nb">len</span><span class="p">(</span><span class="n">word_probabilities</span><span class="p">))</span> <span class="o">+</span> <span class="n">a</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">N</span><span class="o">+</span><span class="n">d</span><span class="p">)</span>
+    
+<span class="n">get_thetas</span><span class="p">(</span><span class="s1">&#39;happy&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[380]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([0.05      , 0.10714286])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[381]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#The sentence for which label needs to be predicted (word tokenized from start)</span>
+<span class="n">sample</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;happy&#39;</span><span class="p">,</span> <span class="s1">&#39;with&#39;</span><span class="p">,</span> <span class="s1">&#39;the&#39;</span><span class="p">,</span> <span class="s1">&#39;product&#39;</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[382]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Calculating product of the probabilities for each word (label-wise)</span>
+<span class="n">probability_product</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">product</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="nb">list</span><span class="p">(</span><span class="n">get_thetas</span><span class="p">(</span><span class="n">i</span><span class="p">))</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">sample</span><span class="p">]),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">probability_product</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[382]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([6.25000000e-06, 1.17138692e-04])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[383]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Prediction of label using argmax after multiplying the thetas with label probabilities (priors)</span>
+<span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">multiply</span><span class="p">(</span><span class="n">label_proba</span><span class="p">,</span> <span class="n">probability_product</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[383]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>1</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The 1 here represents 'positive' label.</p>
+<p>Quite clearly, the first thing that comes to mind is that if we replace the count vectorizer with tfidf vectorizer, the words that are not so important at representing a label will get lesser weights, while improving the weights for words which actually represent the labels. In this case, words like device, experience etc each contribute to either positive or negative labels respectively.</p>
+<p>Similarly, removing stopwords and lemmatizing words will have even more impact on the accuracy of the model.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Bernoulli-classifier-(WIP)">Bernoulli classifier (WIP)<a class="anchor-link" href="#Bernoulli-classifier-(WIP)">&#182;</a></h3>
 </div>
 </div>
 </div>
