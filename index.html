@@ -26,7 +26,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
 	
 	</head>
-	<body onload="keypress2();" onkeypress="keypress1();">
+	<body onload="keypress2();">
 
 	<!--Wrapper supreme-->
     <div id="wrapper">
@@ -811,7 +811,11 @@
 
 </script>
 
+
+
 <script>
+window.onkeypress = keypress;
+
 function keypress1()
 {
  openNav();
@@ -820,6 +824,8 @@ function keypress1()
 </script>
 
 <script>
+window.onkeypress = keypress;
+
 function keypress2()
 {
  closeNav();
