@@ -35,7 +35,7 @@
     <div id="mySidenav" class="sidenav hidden-xs">
       <div class="sidenav-brand">
         <div id="hide_me">
-          <a href="javascript:void(0)" onclick="closeNav();swapFirst();">
+          <a href="javascript:void(0)" onclick="keypress2()" onkeypress="keypress2()">
           <!--center card-->
           <ul class="list-unstyled">
           <li><img src="img/akshay.png" width="120" class="pulse"></li>
@@ -810,6 +810,7 @@
   ga('send', 'pageview');
 
 </script>
+
 <script>
 function keypress1()
 {
@@ -818,6 +819,13 @@ function keypress1()
 }
 </script>
 
+<script>
+function keypress2()
+{
+ closeNav();
+ swapFirst();
+}
+</script>
 
 
 
