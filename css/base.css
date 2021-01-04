@@ -1,4 +1,8 @@
 
+:root {
+  --ascent: #abbf15;
+  /*darkgreen - #8ab514, Alienware - #bdcd49 , dark alien - #abbf15 */
+}
 
 .tab-content h1,.tab-content h2,.tab-content h3,.tab-content h4,.tab-content h5 {
 	color: #000;
@@ -8,17 +12,17 @@
 .tab-content a {
 	color: #000;
 	text-decoration: underline;
-    -moz-text-decoration-color: #bdcd49; /* Code for Firefox */
-    text-decoration-color: #bdcd49;
+    -moz-text-decoration-color: var(--ascent); /* Code for Firefox */
+    text-decoration-color: var(--ascent);
 }
 
 .marker {
-	background-color: #bdcd49;
+	background-color: var(--ascent);
 	font-weight: bold;
 }
 
 .bright {
-	color: #bdcd49;
+	color: var(--ascent);
 }
 
 .sidenav h1, .sidenav h2, .sidenav h3, .sidenav h4, .sidenav h5 {
@@ -36,7 +40,7 @@
 
 .tab-content sup {
 	font-weight: bold;
-	color: #bdcd49;
+	color: var(--ascent);
 }
 
 
@@ -45,7 +49,7 @@
 	.button {
 	display: inline-block;
 	border-radius: 4px;
-	background-color: #bdcd49;
+	background-color: var(--ascent);
 	border: none;
 	color: #FFFFFF;
 	text-align: center;
@@ -183,3 +187,6 @@ table, th, td {
 	width: 80%;
 }
 
+b {
+ font-weight: 900;
+}
