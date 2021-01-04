@@ -1,6 +1,6 @@
 
 :root {
-  --ascent: #abbf15;
+  --accent: #abbf15;
   /*darkgreen - #8ab514, Alienware - #bdcd49 , dark alien - #abbf15 */
 }
 
@@ -12,17 +12,17 @@
 .tab-content a {
 	color: #000;
 	text-decoration: underline;
-    -moz-text-decoration-color: var(--ascent); /* Code for Firefox */
-    text-decoration-color: var(--ascent);
+    -moz-text-decoration-color: var(--accent); /* Code for Firefox */
+    text-decoration-color: var(--accent);
 }
 
 .marker {
-	background-color: var(--ascent);
+	background-color: var(--accent);
 	font-weight: bold;
 }
 
 .bright {
-	color: var(--ascent);
+	color: var(--accent);
 }
 
 .sidenav h1, .sidenav h2, .sidenav h3, .sidenav h4, .sidenav h5 {
@@ -40,7 +40,7 @@
 
 .tab-content sup {
 	font-weight: bold;
-	color: var(--ascent);
+	color: var(--accent);
 }
 
 
@@ -49,7 +49,7 @@
 	.button {
 	display: inline-block;
 	border-radius: 4px;
-	background-color: var(--ascent);
+	background-color: var(--accent);
 	border: none;
 	color: #FFFFFF;
 	text-align: center;
