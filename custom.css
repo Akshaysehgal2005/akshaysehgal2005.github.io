@@ -1,0 +1,117 @@
+
+/*Signature HTML*/
+/*
+<a href="http://akshaysehgal.com/"><span style="float:right; font-size:x-small; color:#333333; margin-top: 5px;">Akshay Sehgal &copy; 2017 (12<sup>th</sup> Apr 17)</span></a>
+*/
+
+
+body{
+    background-color: #fff;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 100;
+    src: local('Open Sans'), local('OpenSans'), url('http://themes.googleusercontent.com/static/fonts/opensans/v5/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff') format('woff');
+}
+
+/*Remove the shadow border of the notebook*/
+#notebook-container {
+	padding-left: 2%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    padding-right: 18%; 
+    min-height: 0;
+    background-color: inherit;
+    -webkit-box-shadow: 0px 0px 0px 0px; 
+    box-shadow: 0px 0px 0px 0px;
+}
+
+/*Change color of links*/
+a {
+    color: #abbf15;
+}
+
+a:hover {
+    color:#000000;
+}
+
+/*Change color of bold text*/
+.rendered_html strong {
+    font-weight: bold;
+    color: #abbf15;
+}
+
+/*Change decoration of block quote*/
+blockquote {
+    padding: 9px 18px;
+    margin: 0 0 18px;
+    font-size: inherit;
+    border-left: 5px solid #abbf1588;
+}
+
+/*all code block*/
+div.input_area {
+	border: 0px;
+    border-bottom: 1px solid #cfcfcf;
+    border-top: 1px solid #cfcfcf;
+    border-radius: 2px;
+    background: #f7f7f755;
+    line-height: 1.21429em;
+
+}
+
+/*code block highlighted text font*/
+div.input_area > div.highlight {
+    font-family: 'Source Code Pro', monospace;
+}
+
+/*Force large images to max take 50% screen*/
+.rendered_html img, .rendered_html svg {
+    max-width: 70%;
+    height: auto;
+}
+
+/*Hide code line markers from code blocks*/
+div.input_prompt, div.output_prompt{
+    color: #ffffff00;
+}
+
+
+/*Restrict the output svg/img width to 70% width*/
+div.output_area img, div.output_area svg {
+    max-width: 70%;
+    height: auto;
+}
+
+/*Font and padding for the content*/
+.rendered_html h1, h2, h3, h4, h5, p {
+	font-family: 'Open Sans', sans-serif;
+    color: #333333;
+    text-align: justify !important;
+}
+
+
+/* Large rounded accent border */
+hr {
+    border: 1px solid #000000;
+    border-radius: 0.5px;
+}
+
+
+/*First block for header*/
+#notebook-container > div:nth-child(1) > div.inner_cell > div {
+    font-family: 'Open Sans', sans-serif;
+    
+    padding-bottom: 1.5%;
+    border-color: #abbf15;
+    
+    color:#000;
+    font-size: 140%;
+}
+
+.rendered_html p code {
+    padding: 4px 4px;
+    background-color: #abbf1555;
+}

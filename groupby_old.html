@@ -1,0 +1,997 @@
+<html><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Akshay Sehgal is a Data Scientist heading RnD for a Big data startup in Mumbai.">
+	<meta name="keywords" content="Akshay Sehgal, Porftolio, Data Scientist, Machine Learning, Mumbai">
+    <meta name="author" content="Akshay Sehgal">
+	<meta name="image_src" content="http://akshaysehgal.com/img/metaimg.png" />
+    <meta name="image_url" content="http://akshaysehgal.com/img/metaimg.png" />
+	
+	<meta property="og:title" content="Akshay Sehgal">
+	<meta property="og:description" content="Akshay Sehgal is a Data Scientist heading RnD for a Big data startup in Mumbai.">
+	<meta property="og:image" content="http://akshaysehgal.com/img/metaimg.png">
+    
+	<title>Groupby & Aggregate</title>
+    <link rel="shortcut icon" href="https://akshaysehgal2005.github.io/favicon_xs.ico" type="image/x-icon">
+    <link rel="icon" href="https://akshaysehgal2005.github.io/favicon_xs.ico" type="image/x-icon">
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">	
+    <!-- Custom CSS -->
+	<link href="css/base.css" rel="stylesheet">
+	<link href="css/navbar.css" rel="stylesheet">
+	<link href="css/sidenav.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+	
+	</head>
+  <body onload="closeNav();swapFirst();">
+
+  <!--Wrapper supreme-->
+    <div id="wrapper">
+    <div class="row">
+    <!--START OF SIDENAV -->
+    <div id="mySidenav" class="sidenav hidden-xs">
+      <div class="sidenav-brand">
+        <div id="hide_me">
+          <a href="javascript:void(0)" onclick="closeNav();swapFirst();">
+          <!--center card-->
+          <ul class="list-unstyled">
+          <li><img src="img/akshay.png" width="120" class="pulse"></li>
+          <!--<li>
+            <h2><b>Akshay Sehgal</b></h2>
+            <h3><b>Data Scientist, Entreprenuer</b></h3>
+          </li>-->
+          </ul>
+          </a>
+        </div>
+        
+          <!--hidden icon-->
+        <div id="show_me" class="hidden">
+          <a href="javascript:void(0)" onclick="openNav();swapSecond()">
+            <img src="img/akshay.png" width="60" class="pulse">
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- END OF SIDENAV --> 
+
+		<!-- START OF MAIN PANEL -->
+		<div id="myMainpanel" class="mainpanel">
+			<div id="show_me_too">
+			
+				<!-- START OF NAVBAR -->
+				<div class="container-fluid">
+				<div class="navbar">
+					<div class="navbar-header">
+						<div class="visible-xs">
+							<ul class="nav nav-tabs" role="tablist">
+								<li class="active"><a href="#Portfolio" aria-controls="Portfolio" role="tab" data-toggle="tab"><i class="fa fa-1x fa-user"></i></a></li>
+								<li><a href="#Projects" aria-controls="Projects" role="tab" data-toggle="tab"><i class="fa fa-1x fa-area-chart"></i></a></li>
+								<li><a href="#Blog" aria-controls="Blog" role="tab" data-toggle="tab"><i class="fa fa-1x fa-coffee"></i></a></li>
+								<!--<li><a href="#Design" aria-controls="Design" role="tab" data-toggle="tab"><i class="fa fa-1x fa-paint-brush"></i></a></li>
+								<li><a href="#Contact" aria-controls="Contact" role="tab" data-toggle="tab"><i class="fa fa-1x fa-comments"></i></a></li>-->
+							</ul>
+						</div>
+					</div>
+					<div class="hidden-xs">
+						<ul class="nav nav-tabs" role="tablist">
+							<li><a href="index.html"><b>Back to portfolio</b></a></li>
+						</ul>
+					</div>
+				</div>
+				</div>
+				<!-- END OF NAVBAR -->
+				
+				
+                <div class="tab-content">
+				
+				<!--START OF PORTFOLIO-->
+                <div role="tabpanel" class="tab-pane active" id="Portfolio">
+				<div class="row">
+
+
+<!-- START PASTING -->
+
+
+  <div tabindex="-1" id="notebook" class="border-box-sizing">
+    <div class="container" id="notebook-container">
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><h1>Group by & Aggregate using Pandas</h1></p>
+<h5 style="color:#bdcd49"><b>Last updated: 25th Mar 2017</b></h5>
+<h5 style="color:#bdcd49"><b>Akshay Sehgal, www.akshaysehgal.com</b></h5>
+<h5 style="color:#bdcd49">Data downloadable <a href="data/titanic.csv" download>here</a> </h5>
+<p>Data Grouping is probably the most used concept in the field of data analysis. Almost every scripting language builds its foundation over grouping data by categories of a multi-dimensional variable. A data scientist uses this for summarizing data for analysis as well as changing the level at which data can be useful for a model. Example, transaction level data needs to be summarized at customer level data before predicting their spend. Usecases like these are where languages like SQL are very useful with their group by clauses. However python isn't too far behind. Pandas provides a large variety of methods which do so much more than the standard SQL grouping. This combined with the aggregate methods gives a Data Scientist a strong grasp over data handling. The objective of this notebook is to explore group by and aggregation methods on data using python library Pandas.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2>1. Introduction</h2><p>SQL groupby is probably the most popular feature for data transformation and it helps to be able to replicate the same form of data manipulation techniques using python for designing more advance data science systems. As a result, its important to understand the basic components of a groupby clause.</p>
+<ul>
+<li><b>Select</b> - Is the list of aggregated features that the analyst is interested in</li>
+<li><b>From</b> - Source of the data</li>
+<li><b>Group By</b> - Feature(s) whose distinct values will be the basis of the grouping of selected aggregate features</li>
+<li><b>Where</b> - Any additional conditions that need to be checked on the raw data, before grouping up the data</li>
+<li><b>Having</b> - Any additional conditions that need to be checked on OUTPUT of the group by query, before displaying it</li>
+</ul>
+
+<p>Keeping these concepts in mind, the Pandas groupby method will be explored in detail below.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Set Work Directory</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="s1">&#39;C:</span><span class="se">\\</span><span class="s1">Users</span><span class="se">\\</span><span class="s1">Akshay</span><span class="se">\\</span><span class="s1">Documents</span><span class="se">\\</span><span class="s1">iPython</span><span class="se">\\</span><span class="s1">Personal</span><span class="se">\\</span><span class="s1">Practice&#39;</span><span class="p">)</span>
+<span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>
+
+<span class="c1">#Import Titanic Data</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s1">&#39;titanic.xls&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2>2. Syntax</h2><p>The core syntax can be broken down similar to the Select-From-Groupby-Where clause. Sample code is given below :</p><p><b><code>Table_name.groupby(['Group'])['Feature'].aggregation()</code></b></p>
+<ul>
+<li>Table_name to specify the FROM</li>
+<li>'Group' is the list of GROUP BY variables</li>
+<li>'Feature' is the list of SELECT variables (with or without WHERE condition)</li>
+<li>Aggregate() is to specify the aggregation</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Two step query to find sum of survived people, grouped by their passenger class (1 &gt; 2 &gt; 3)</span>
+<span class="n">group_survived</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;Pclass&#39;</span><span class="p">])</span>
+<span class="n">out_survived</span> <span class="o">=</span> <span class="n">group_survived</span><span class="p">[</span><span class="s1">&#39;Survived&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">out_survived</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Pclass
+1    200
+2    119
+3    181
+Name: Survived, dtype: int64
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Above snippet can be implemented in a single command as follows</span>
+<span class="n">out_survived</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;Pclass&#39;</span><span class="p">])[</span><span class="s1">&#39;Survived&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">out_survived</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Pclass
+1    200
+2    119
+3    181
+Name: Survived, dtype: int64
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><h3>2.1 Adding more groups/levels</h3></p>
+<p>We can pass a list of features in the groupby() to increase the levels of divisions in data as below :</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Three level groupby to find mean of age</span>
+<span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;Survived&#39;</span><span class="p">,</span><span class="s1">&#39;Pclass&#39;</span><span class="p">,</span><span class="s1">&#39;Sex&#39;</span><span class="p">])[</span><span class="s1">&#39;Age&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[6]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>Survived  Pclass  Sex   
+0         1       female    35.200000
+                  male      43.658163
+          2       female    34.090909
+                  male      33.092593
+          3       female    23.418750
+                  male      26.679598
+1         1       female    37.109375
+                  male      36.168240
+          2       female    26.711051
+                  male      17.449274
+          3       female    20.814815
+                  male      22.436441
+Name: Age, dtype: float64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><h3>2.2 Adding more variables/features</h3></p>
+<p>Similarly, we can also pass a list of features after the groupby to increase the variables we want to aggregate, as below :</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Three level groupby to find mean of age and fares</span>
+<span class="c1">#reset_index() just arranges the column names properly like a data frame</span>
+<span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;Survived&#39;</span><span class="p">,</span><span class="s1">&#39;Pclass&#39;</span><span class="p">,</span><span class="s1">&#39;Sex&#39;</span><span class="p">])[</span><span class="s1">&#39;Age&#39;</span><span class="p">,</span><span class="s1">&#39;Fare&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[7]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Survived</th>
+      <th>Pclass</th>
+      <th>Sex</th>
+      <th>Age</th>
+      <th>Fare</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>1</td>
+      <td>female</td>
+      <td>35.200000</td>
+      <td>117.054180</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0</td>
+      <td>1</td>
+      <td>male</td>
+      <td>43.658163</td>
+      <td>68.436192</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0</td>
+      <td>2</td>
+      <td>female</td>
+      <td>34.090909</td>
+      <td>19.125000</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0</td>
+      <td>2</td>
+      <td>male</td>
+      <td>33.092593</td>
+      <td>19.857334</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0</td>
+      <td>3</td>
+      <td>female</td>
+      <td>23.418750</td>
+      <td>18.367162</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>0</td>
+      <td>3</td>
+      <td>male</td>
+      <td>26.679598</td>
+      <td>12.134521</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>1</td>
+      <td>1</td>
+      <td>female</td>
+      <td>37.109375</td>
+      <td>109.137500</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>1</td>
+      <td>1</td>
+      <td>male</td>
+      <td>36.168240</td>
+      <td>72.697546</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>1</td>
+      <td>2</td>
+      <td>female</td>
+      <td>26.711051</td>
+      <td>23.759486</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>1</td>
+      <td>2</td>
+      <td>male</td>
+      <td>17.449274</td>
+      <td>20.183000</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>1</td>
+      <td>3</td>
+      <td>female</td>
+      <td>20.814815</td>
+      <td>12.166510</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>1</td>
+      <td>3</td>
+      <td>male</td>
+      <td>22.436441</td>
+      <td>13.977496</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><h3>2.3 WHERE Clause</h3></p>
+<p>Adding a Where clause is quite intuitive as you can specify this as conditions before the groupby() method. This first applies the where condition on the dataframe, then groups it and aggregates given variables to throw results.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Fare and Age average for only those who survived</span>
+<span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Survived&#39;</span><span class="p">]</span><span class="o">==</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;Pclass&#39;</span><span class="p">,</span><span class="s1">&#39;Sex&#39;</span><span class="p">])[</span><span class="s1">&#39;Age&#39;</span><span class="p">,</span><span class="s1">&#39;Fare&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[8]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Pclass</th>
+      <th>Sex</th>
+      <th>Age</th>
+      <th>Fare</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>female</td>
+      <td>37.109375</td>
+      <td>109.137500</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>male</td>
+      <td>36.168240</td>
+      <td>72.697546</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2</td>
+      <td>female</td>
+      <td>26.711051</td>
+      <td>23.759486</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2</td>
+      <td>male</td>
+      <td>17.449274</td>
+      <td>20.183000</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>3</td>
+      <td>female</td>
+      <td>20.814815</td>
+      <td>12.166510</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>3</td>
+      <td>male</td>
+      <td>22.436441</td>
+      <td>13.977496</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#The same query above can be broken down into 3 steps for better understanding</span>
+<span class="n">df1</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Survived&#39;</span><span class="p">]</span><span class="o">==</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">grouped_data</span> <span class="o">=</span> <span class="n">df1</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;Pclass&#39;</span><span class="p">,</span><span class="s1">&#39;Sex&#39;</span><span class="p">])</span>
+<span class="n">output</span> <span class="o">=</span> <span class="n">grouped_data</span><span class="p">[</span><span class="s1">&#39;Age&#39;</span><span class="p">,</span><span class="s1">&#39;Fare&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">output</span><span class="o">.</span><span class="n">reset_index</span><span class="p">())</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>   Pclass     Sex        Age        Fare
+0       1  female  37.109375  109.137500
+1       1    male  36.168240   72.697546
+2       2  female  26.711051   23.759486
+3       2    male  17.449274   20.183000
+4       3  female  20.814815   12.166510
+5       3    male  22.436441   13.977496
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><h3>2.4 Multiple Aggregations - Stepwise</h3></p>
+<p>Till now only one aggregation is being applied on variables in all the examples above. Next is how to create multiple types of aggregations on data. This task can be performed step by step with first grouping the table, next creating 1 aggregate variable at a time, then finally combining them into a single dataframe using pd.DataFrame()</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">##Step 1: Group by Gender</span>
+<span class="n">groupby1</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;Sex&#39;</span><span class="p">])</span>
+
+<span class="c1">##Step 2: Calculate different aggregations on &#39;Fare&#39; variable</span>
+<span class="n">meanfare</span> <span class="o">=</span> <span class="n">groupby1</span><span class="p">[</span><span class="s1">&#39;Fare&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">maxfare</span> <span class="o">=</span> <span class="n">groupby1</span><span class="p">[</span><span class="s1">&#39;Fare&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+<span class="n">minfare</span> <span class="o">=</span> <span class="n">groupby1</span><span class="p">[</span><span class="s1">&#39;Fare&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+<span class="n">stdfare</span> <span class="o">=</span> <span class="n">groupby1</span><span class="p">[</span><span class="s1">&#39;Fare&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+<span class="n">rangefare</span> <span class="o">=</span> <span class="n">maxfare</span><span class="o">-</span><span class="n">minfare</span>  <span class="c1">#Can also create custom aggregations</span>
+
+<span class="c1">##Step 3: Combine into a single DataFrame</span>
+<span class="c1">#Min, Mean, Max</span>
+<span class="n">farestats1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;meanfare&#39;</span><span class="p">:</span><span class="n">meanfare</span><span class="p">,</span><span class="s1">&#39;maxfare&#39;</span><span class="p">:</span><span class="n">maxfare</span><span class="p">,</span><span class="s1">&#39;minfare&#39;</span><span class="p">:</span><span class="n">minfare</span><span class="p">})</span>
+<span class="c1">#Mean, Range, Standard deviation</span>
+<span class="n">farestats2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;meanfare&#39;</span><span class="p">:</span><span class="n">meanfare</span><span class="p">,</span><span class="s1">&#39;stdfare&#39;</span><span class="p">:</span><span class="n">stdfare</span><span class="p">,</span><span class="s1">&#39;rangefare&#39;</span><span class="p">:</span><span class="n">rangefare</span><span class="p">})</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">farestats1</span><span class="o">.</span><span class="n">reset_index</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">farestats2</span><span class="o">.</span><span class="n">reset_index</span><span class="p">())</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>      Sex   maxfare   meanfare  minfare
+0  female  512.3292  46.198097     6.75
+1    male  512.3292  26.154601     0.00
+      Sex   meanfare  rangefare    stdfare
+0  female  46.198097   505.5792  63.292599
+1    male  26.154601   512.3292  42.486877
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><h3>2.5 Multiple Aggregations - using agg()</h3></p>
+<p>This is an advanced way of using multiple aggregations on different variables by use of AGG() and DICTIONARIES.</p>
+<p>The difference between [ ] and { } parenthesis is that square brackets represent a list where each element is unique, while curly brackets represent a set(), where we have the ability to create dictionaries for later use. One such use of dictionaries is agg() method a.k.a aggregate method.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">##First define the functions that need to be performed</span>
+
+<span class="c1">#Dictionary &#39;f&#39; uses 3 aggregations on same variable &#39;fare&#39; </span>
+<span class="n">f</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Fare&#39;</span><span class="p">:[</span><span class="s1">&#39;mean&#39;</span><span class="p">,</span><span class="s1">&#39;max&#39;</span><span class="p">,</span><span class="s1">&#39;min&#39;</span><span class="p">]}</span>
+
+<span class="c1">#The dictionary is then passed into the aggregate() method</span>
+<span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;Sex&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span><span class="n">f</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[11]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Sex</th>
+      <th colspan="3" halign="left">Fare</th>
+    </tr>
+    <tr>
+      <th></th>
+      <th></th>
+      <th>mean</th>
+      <th>max</th>
+      <th>min</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>female</td>
+      <td>46.198097</td>
+      <td>512.3292</td>
+      <td>6.75</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>male</td>
+      <td>26.154601</td>
+      <td>512.3292</td>
+      <td>0.00</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Dictionary &#39;g&#39; contains 2 separate aggregations on 2 different  variables &#39;fare&#39; and &#39;age&#39; respectively</span>
+<span class="n">g</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;fare&#39;</span><span class="p">:[</span><span class="s1">&#39;mean&#39;</span><span class="p">,</span><span class="s1">&#39;std&#39;</span><span class="p">],</span><span class="s1">&#39;age&#39;</span><span class="p">:[</span><span class="s1">&#39;mean&#39;</span><span class="p">,</span><span class="s1">&#39;std&#39;</span><span class="p">]}</span>
+<span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;sex&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span><span class="n">g</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[18]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr>
+      <th></th>
+      <th>sex</th>
+      <th colspan="2" halign="left">fare</th>
+      <th colspan="2" halign="left">age</th>
+    </tr>
+    <tr>
+      <th></th>
+      <th></th>
+      <th>mean</th>
+      <th>std</th>
+      <th>mean</th>
+      <th>std</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>female</td>
+      <td>46.198097</td>
+      <td>63.292599</td>
+      <td>28.687071</td>
+      <td>14.576995</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>male</td>
+      <td>26.154601</td>
+      <td>42.486877</td>
+      <td>30.585233</td>
+      <td>14.280571</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><h3>2.6 Renaming aggregated variables</h3></p>
+<p><p>Initialy while creating dictionaries, we used { } to define the first level of the dictionary, but the sub-levels were inputted still in [ ]. Here the only difference is that instead of passing a list [ ] into a dictionary element, we pass another dictionary to it, since we can associate labels to dictionary elements easily. For example :</p></p>
+<li> <b>{ 'element1' : ['a','b'] }</b> is a dictionary with list 'a','b' passed to element1.</li>
+<li> <b>{ 'element1' : {'a','b'} }</b> is a dictionary with dictionary 'a','b' passed to element1.</li><p><p> This allows adding labels to the dictionary inside as follows :</p></p>
+<li> <b>{ 'element1' : { 'label1':'a'  ,  'label2':'b' }}</b> </li>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Dictionary h contains mean() as average, max() as maximas and min() as minimas, associated with variable &#39;fare&#39;</span>
+<span class="n">h</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Fare&#39;</span><span class="p">:{</span><span class="s1">&#39;average&#39;</span><span class="p">:</span><span class="s1">&#39;mean&#39;</span><span class="p">,</span><span class="s1">&#39;maximas&#39;</span><span class="p">:</span><span class="s1">&#39;max&#39;</span><span class="p">,</span><span class="s1">&#39;minimas&#39;</span><span class="p">:</span><span class="s1">&#39;min&#39;</span><span class="p">}}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;Sex&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span><span class="n">h</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">())</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>      Sex       Fare                  
+             average   maximas minimas
+0  female  46.198097  512.3292    6.75
+1    male  26.154601  512.3292    0.00
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><h3>2.7 Custom Aggregations</h3></p>
+<p>There are 2 ways of creating custom aggregations. One is using the step by step method above to create the custom aggregation (as shown previously with 'Rangefare' aggregation). The other method is using LAMBDA X to create the aggregation, as shown below</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Lambda function can be associated with a calculation as well as a label to create custom aggregations</span>
+<span class="n">i</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Fare&#39;</span><span class="p">:{</span><span class="s1">&#39;average&#39;</span><span class="p">:</span><span class="s1">&#39;mean&#39;</span><span class="p">,</span><span class="s1">&#39;deviation&#39;</span><span class="p">:</span><span class="s1">&#39;std&#39;</span><span class="p">,</span><span class="s1">&#39;range&#39;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">x</span> <span class="p">:</span> <span class="nb">max</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">-</span><span class="nb">min</span><span class="p">(</span><span class="n">x</span><span class="p">)}}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;Sex&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">())</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>      Sex       Fare                     
+             average  deviation     range
+0  female  46.198097  63.292599  505.5792
+1    male  26.154601  42.486877  512.3292
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2>3. Pandas predefined methods</h2><p>This is a work in progress list of aggregate methods that can be used with groupby(). </p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Different methods can be called during pandas groupby and aggregate</span>
+
+<span class="n">non_null_count</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;Sex&#39;</span><span class="p">])[</span><span class="s1">&#39;Age&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
+<span class="n">summation</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;Sex&#39;</span><span class="p">])[</span><span class="s1">&#39;Age&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">average</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;Sex&#39;</span><span class="p">])[</span><span class="s1">&#39;Age&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">mean_absolute_dev</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;Sex&#39;</span><span class="p">])[</span><span class="s1">&#39;Age&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mad</span><span class="p">()</span>
+<span class="n">arithmetic_median</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;Sex&#39;</span><span class="p">])[</span><span class="s1">&#39;Age&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
+<span class="n">maximum</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;Sex&#39;</span><span class="p">])[</span><span class="s1">&#39;Age&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+<span class="n">minimum</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;Sex&#39;</span><span class="p">])[</span><span class="s1">&#39;Age&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+<span class="n">product</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;Sex&#39;</span><span class="p">])[</span><span class="s1">&#39;Age&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">prod</span><span class="p">()</span>
+<span class="n">unbiased_std_dev</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;Sex&#39;</span><span class="p">])[</span><span class="s1">&#39;Age&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+<span class="n">unbiased_variance</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;Sex&#39;</span><span class="p">])[</span><span class="s1">&#39;Age&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">var</span><span class="p">()</span>
+<span class="n">unbiased_std_err_of_mean</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;Sex&#39;</span><span class="p">])[</span><span class="s1">&#39;Age&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sem</span><span class="p">()</span>
+<span class="n">unbiased_skewness_3rdmoment</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;Sex&#39;</span><span class="p">])[</span><span class="s1">&#39;Age&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">skew</span><span class="p">()</span>
+
+<span class="c1">#cumsum1 = df.groupby([&#39;sex&#39;])[&#39;age&#39;].cumsum()</span>
+<span class="c1">#cumprod1 = df.groupby([&#39;sex&#39;])[&#39;age&#39;].cumprod()</span>
+<span class="c1">#cummax1 = df.groupby([&#39;sex&#39;])[&#39;age&#39;].cummax()</span>
+<span class="c1">#cummin1 = df.groupby([&#39;sex&#39;])[&#39;age&#39;].cummin()</span>
+<span class="c1">#quantile = df.groupby([&#39;sex&#39;])[&#39;age&#39;].quantile()</span>
+<span class="c1">#unbiased_kurtosis_4thmoment = df.groupby([&#39;sex&#39;])[&#39;age&#39;].kurt()</span>
+<span class="c1">#arithmetic_mode = df.groupby([&#39;sex&#39;])[&#39;age&#39;].mode()</span>
+<span class="c1">#absolute_value = df.groupby([&#39;sex&#39;])[&#39;age&#39;].abs()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">arithmetic_median</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Sex
+female    27.0
+male      28.0
+Name: Age, dtype: float64
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><h2>4. References</h2></p>
+<ul>
+<li>http://www.scipy-lectures.org/packages/statistics/index.html#hypothesis-testing-comparing-two-groups</li>
+<li>https://www.simple-talk.com/sql/t-sql-programming/sql-group-by-basics/</li>
+<li>http://www.shanelynn.ie/summarising-aggregation-and-grouping-data-in-python-pandas/</li>
+<li>http://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.groupby.html</li>
+</ul>
+</div>
+</div>
+</div>
+    </div>
+  </div>
+
+
+
+  
+ 
+<!-- END PASTING -->
+
+
+				</div>
+				<!-- END OF TAB PANEL-->
+			</div>
+		</div>
+		<!-- END OF MAIN PANEL -->
+		</div>
+	</div>
+	<!-- SCRIPTS -->
+	<script src="js/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/sidenav.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-66518016-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+	<!--Wrapper supreme--> 
+	</body>  
+	</html>
