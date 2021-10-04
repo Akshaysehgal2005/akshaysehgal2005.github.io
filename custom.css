@@ -78,21 +78,6 @@ div.output_area img, div.output_area svg {
     height: auto;
 }
 
-/*Font and padding for the content*/
-.rendered_html h1, h2, h3, h4, h5, p {
-	font-family: 'Open Sans', sans-serif;
-    color: #333333;
-    text-align: justify !important;
-}
-
-
-/* Large rounded accent border */
-hr {
-    border: 1px solid #000000;
-    border-radius: 0.5px;
-}
-
-
 /*First block for header*/
 #notebook-container > div:nth-child(1) > div.inner_cell > div {
     font-family: 'Open Sans', sans-serif;
@@ -101,9 +86,30 @@ hr {
     border-color: #abbf15;
     
     color:#000;
-    font-size: 140%;
-    text-align: left !important;    
+    font-size: 140%;   
 }
+
+/*Font and padding for the content*/
+.rendered_html h2, h3, h4, h5, p {
+	font-family: 'Open Sans', sans-serif;
+    color: #333333;
+    text-align: justify !important;
+}
+
+/*Font and padding for the content*/
+.rendered_html h1 {
+    font-family: 'Open Sans', sans-serif;
+    color: #333333;
+    text-align: left !important;
+}
+
+/* Large rounded accent border */
+hr {
+    border: 1px solid #000000;
+    border-radius: 0.5px;
+}
+
+
 
 /*small code block properties*/
 .rendered_html p code {
