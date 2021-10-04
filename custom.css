@@ -102,6 +102,7 @@ hr {
     
     color:#000;
     font-size: 140%;
+    text-align: left !important;    
 }
 
 /*small code block properties*/
