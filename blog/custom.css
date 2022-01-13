@@ -18,6 +18,14 @@ ADD THIS TO HTML AT THE END OF THE HTML DOCUMENT (RIGHT BEFORE LAST </HTML> TAG)
 
 */
 
+/*
+ADD THIS TO THE START OF THE BLOG HTML, RIGHT AFTER THE LINE WITH TITLE - 
+
+<link rel="shortcut icon" href="https://akshaysehgal2005.github.io/favicon_xs.ico" type="image/x-icon">
+<link rel="icon" href="https://akshaysehgal2005.github.io/favicon_xs.ico" type="image/x-icon">
+
+*/
+
 
 
 body{
