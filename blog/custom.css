@@ -1,0 +1,161 @@
+
+/*
+ADD THIS TO HTML AT THE END OF THE HTML DOCUMENT (RIGHT BEFORE LAST </HTML> TAG)
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-66518016-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<!-- Custom stylesheet, it must be in the same directory as the html file -->
+<link rel="stylesheet" href="custom.css">
+
+*/
+
+
+
+body{
+    background-color: #fff;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 100;
+    src: local('Open Sans'), local('OpenSans'), url('http://themes.googleusercontent.com/static/fonts/opensans/v5/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff') format('woff');
+}
+
+/*Remove the shadow border of the notebook*/
+.jp-Notebook {
+	padding-left: 15%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    padding-right: 25%; 
+    min-height: 0;
+    background-color: inherit;
+    -webkit-box-shadow: 0px 0px 0px 0px; 
+    box-shadow: 0px 0px 0px 0px;
+}
+
+/*Change color of links*/
+a {
+    color: #abbf15 !important;
+}
+
+a:hover {
+    color:#000000 !important;
+}
+
+/*Change color of bold text*/
+.jp-RenderedHTMLCommon strong {
+    font-weight: bold;
+    color: #abbf15;
+}
+
+/*Change decoration of block quote*/
+blockquote {
+    padding: 0px 18px 0px !important;
+    margin: 18 0 18px !important;
+    font-size: inherit !important;
+    border-left: 5px solid #abbf1588 !important;
+}
+
+/*all code block*/
+div.jp-CodeMirrorEditor {
+	border: 0px !important;
+    border-bottom: 1px solid #cfcfcf !important;
+    border-top: 1px solid #cfcfcf !important;
+    border-radius: 2px !important;
+    background-color: #f5f5f5 !important;
+    line-height: 1.21429em !important;
+}
+
+/*code block highlighted text font*/
+div.jp-InputArea > div.highlight {
+    font-family: 'Source Code Pro', monospace;
+}
+
+/*Force large images to max take 50% screen*/
+.jp-RenderedHTMLCommon img, .jp-RenderedHTMLCommon svg {
+    max-width: 90%;
+    height: auto;
+}
+
+/*Hide code line markers from code blocks*/
+div.jp-OutputPrompt, div.jp-InputPrompt{
+    color: #fff !important;
+}
+
+/*
+div.jp-InputArea-editor, div.CodeMirror > div.highlight{
+    background-color: blue !important;
+}
+*/
+
+
+
+/*Restrict the output svg/img width to 70% width*/
+div.jp-OutputArea img, div.jp-OutputArea svg {
+    max-width: 70%;
+    height: auto;
+}
+
+/*First block for header*/
+.jp-Notebook > div:nth-child(1) > div.jp-CodeMirrorEditor > div {
+    font-family: 'Open Sans', sans-serif;
+    
+    padding-bottom: 1.5%;
+    border-color: #abbf15;
+    
+    color:#000;
+    font-size: 140%;   
+}
+
+/*Font and padding for the content*/
+.jp-RenderedHTMLCommon h2, h3, h4, h5, p {
+	font-family: 'Open Sans', sans-serif;
+    color: #333333;
+    text-align: justify !important;
+    margin-top: 20px !important;
+}
+
+/*Font and padding for the content*/
+.jp-RenderedHTMLCommon h1 {
+    font-family: 'Open Sans', sans-serif;
+    color: #333333;
+    text-align: left !important;
+}
+
+/* Large rounded accent border */
+hr {
+    border: 1px solid #000000 !important;
+    border-radius: 0.5px !important;
+}
+
+/*small code block properties*/
+.jp-RenderedHTMLCommon p code {
+    padding: 4px 4px;
+    background-color: #abbf1555;
+    font-size: 90%;
+    border-radius: 2px;
+}
+
+
+/*Signature HTML*/
+/*
+<a href="http://akshaysehgal.com/"><span class="copyright" style="float:right; font-size:x-small; color:#333333; margin-top: 5px;">Akshay Sehgal &copy; 2017 (3<sup>rd</sup> Oct 21)</span></a>
+*/
+
+/*copyright tag properties*/
+.copyright{
+    float:right !important; 
+    font-size:x-small !important; 
+    color:#333333 !important; 
+    margin-top: 5px !important;
+}
